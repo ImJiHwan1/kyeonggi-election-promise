@@ -1,6 +1,6 @@
 
 html { scrollbar-gutter: stable !important; }
-body { font-family:'Noto Sans KR','Roboto','Malgun Gothic','dotum','Arial',sans-serif; word-break: break-all }
+body { font-family:'Pretendard','Noto Sans KR','Roboto','Malgun Gothic','dotum','Arial',sans-serif; word-break: break-all }
 /*p, a, h1, h2, h3, h4, h5, h6, dt, dd, th, td, span, strong, li { transform: rotate(-0.001deg) !important } */
 input[type=text]::-ms-clear { display: none !important; }
 p { margin-bottom:0 }

@@ -25,7 +25,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  --font-family-sans-serif: "Pretendard", -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -5877,7 +5877,7 @@ a.badge-dark:focus {
   -ms-flex-align: start;
   align-items: flex-start;
   justify-content: space-between
-	
+
 }
 
 .media-body {
