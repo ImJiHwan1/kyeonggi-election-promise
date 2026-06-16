@@ -194,7 +194,7 @@ const DetailPage: React.FC = () => {
                           type="button"
                           className={`btn btn_location ${selectedCity === city ? 'active' : ''}`}
                           onClick={() => setSelectedCity(city)}
-                          style={{ width: '100%', margin: 0 }}
+                          style={{ margin: 0 }}
                         >
                           {city}
                         </button>
