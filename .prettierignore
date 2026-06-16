@@ -1,0 +1,17 @@
+# prettier ignore 적용시킬 폴더 정의
+
+# tsconfig.json
+# coverage
+src/app/layout.tsx
+
+
+.eslintrc
+.eslintrc.json
+
+# 빌드 파일 제외
+.next/
+out/
+public/*
+
+# node_modules는 기본적으로 포맷되지 않지만 추가해도 됨
+node_modules/

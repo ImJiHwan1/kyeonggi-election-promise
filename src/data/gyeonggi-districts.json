@@ -1,0 +1,2458 @@
+[
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "수원시",
+    "election_district": "수원시제1선거구(장안구)",
+    "election_area": "파장동, 영화동, 송죽동, 조원1동, 조원2동, 연무동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "수원시",
+    "election_district": "수원시제2선거구(장안구)",
+    "election_area": "정자1동, 정자2동, 정자3동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "수원시",
+    "election_district": "수원시제3선거구(권선구)",
+    "election_area": "서둔동, 구운동, 입북동, 율천동(수원시장안구)  "
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회 ",
+    "council_type": "광역의회",
+    "city_name": "수원시",
+    "election_district": "수원시제4선거구(권선구)",
+    "election_area": "평동, 금곡동, 호매실동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "수원시",
+    "election_district": "수원시제5선거구(팔달구)",
+    "election_area": "매교동, 매산동, 고등동, 화서1동, 화서2동, 세류1동(수원시권선구)"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "수원시",
+    "election_district": "수원시제6선거구(팔달구)",
+    "election_area": "행궁동, 지동, 우만1동, 우만2동, 인계동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "수원시",
+    "election_district": "수원시제7선거구(영통구)",
+    "election_area": "매탄1동, 매탄2동, 매탄3동, 매탄4동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "수원시",
+    "election_district": "수원시제8선거구(영통구)",
+    "election_area": "원천동, 영통1동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "수원시",
+    "election_district": "수원시제9선거구(영통구)",
+    "election_area": "광교1동, 광교2동  "
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "수원시",
+    "election_district": "수원시제10선거구(권선구)",
+    "election_area": "세류2동, 세류3동, 권선1동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "수원시",
+    "election_district": "수원시제11선거구(권선구)",
+    "election_area": "권선2동, 곡선동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "수원시",
+    "election_district": "수원시제12선거구(영통구)",
+    "election_area": "영통2동, 영통3동, 망포1동, 망포2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "용인시",
+    "election_district": "용인시제1선거구(처인구)",
+    "election_area": "포곡읍, 모현읍, 역북동, 유림1동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "용인시",
+    "election_district": "용인시제2선거구(처인구)",
+    "election_area": "이동읍, 남사읍, 중앙동, 삼가동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "용인시",
+    "election_district": "용인시제3선거구(기흥구)",
+    "election_area": "신갈동, 영덕1동, 영덕2동, 기흥동, 서농동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "용인시",
+    "election_district": "용인시제4선거구(기흥구)",
+    "election_area": "구갈동, 상갈동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "용인시",
+    "election_district": "용인시제5선거구(기흥구)",
+    "election_area": "보라동, 동백2동, 상하동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "용인시",
+    "election_district": "용인시제6선거구(수지구)",
+    "election_area": "상현1동, 상현3동, 성복동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "용인시",
+    "election_district": "용인시제7선거구(수지구)",
+    "election_area": "풍덕천1동, 동천동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "용인시",
+    "election_district": "용인시제8선거구(수지구)",
+    "election_area": "풍덕천2동, 신봉동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "용인시",
+    "election_district": "용인시제9선거구(기흥구)",
+    "election_area": "구성동, 마북동, 동백1동, 동백3동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "용인시",
+    "election_district": "용인시제10선거구(기흥구)",
+    "election_area": "보정동, 죽전1동(용인시수지구), 죽전2동(용인시수지구), 죽전3동(용인시수지구), 상현2동(용인시수지구)"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "용인시",
+    "election_district": "용인시제11선거구(처인구)",
+    "election_area": "원삼면, 백암면, 양지읍, 유림2동, 동부동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "고양시",
+    "election_district": "고양시제1선거구(덕양구)",
+    "election_area": "주교동, 성사1동, 성사2동, 식사동(고양시일산동구)"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "고양시",
+    "election_district": "고양시제2선거구(덕양구)",
+    "election_area": "원신동, 흥도동, 고양동, 관산동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "고양시",
+    "election_district": "고양시제3선거구(덕양구)",
+    "election_area": "화정1동, 화정2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "고양시",
+    "election_district": "고양시제4선거구(덕양구)",
+    "election_area": "능곡동, 행주동, 행신1동, 행신3동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "고양시",
+    "election_district": "고양시제5선거구(덕양구)",
+    "election_area": "행신2동, 행신4동, 화전동, 대덕동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "고양시",
+    "election_district": "고양시제6선거구(덕양구)",
+    "election_area": "효자동, 삼송1동, 삼송2동, 창릉동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "고양시",
+    "election_district": "고양시제7선거구(일산동구)",
+    "election_area": "중산1동, 중산2동, 고봉동, 일산2동(고양시일산서구)"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "고양시",
+    "election_district": "고양시제8선거구(일산동구)",
+    "election_area": "정발산동, 풍산동, 장항1동, 장항2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "고양시",
+    "election_district": "고양시제9선거구(일산동구)",
+    "election_area": "백석1동, 백석2동, 마두1동, 마두2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "고양시",
+    "election_district": "고양시제10선거구(일산동구)",
+    "election_area": "일산1동, 탄현1동, 탄현2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "고양시",
+    "election_district": "고양시제11선거구(일산동구)",
+    "election_area": "일산3동, 주엽1동, 주엽2동, 대화동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "고양시",
+    "election_district": "고양시제12선거구(일산동구)",
+    "election_area": "송포동, 덕이동, 가좌동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "화성시",
+    "election_district": "화성시제1선거구(만세구)",
+    "election_area": "향남읍, 양감면, 정남면(화성시효행구)"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "화성시",
+    "election_district": "화성시제2선거구(만세구)",
+    "election_area": "우정읍, 팔탄면, 장안면, 매송면(화성시효행구), 비봉면(화성시효행구)"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "화성시",
+    "election_district": "화성시제3선거구(동탄구)",
+    "election_area": "동탄1동, 동탄2동, 동탄5동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "화성시",
+    "election_district": "화성시제4선거구(동탄구)",
+    "election_area": "동탄4동, 동탄6동, 동탄8동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "화성시",
+    "election_district": "화성시제5선거구(동탄구)",
+    "election_area": "동탄7동, 동탄9동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "화성시",
+    "election_district": "화성시제6선거구(효행구)",
+    "election_area": "봉담읍, 기배동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "화성시",
+    "election_district": "화성시제7선거구(병점구)",
+    "election_area": "진안동, 병점1동, 병점2동, 화산동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "화성시",
+    "election_district": "화성시제8선거구(병점구)",
+    "election_area": "반월동, 동탄3동(화성시동탄구)"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "화성시",
+    "election_district": "화성시제9선거구(만세구)",
+    "election_area": "남양읍, 마도면, 송산면, 서신면, 새솔동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "성남시",
+    "election_district": "성남시제1선거구(수정구)",
+    "election_area": "신흥1동, 신흥2동, 신흥3동, 수진1동, 수진2동, 단대동, 신촌동, 고등동, 시흥동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "성남시",
+    "election_district": "성남시제2선거구(수정구)",
+    "election_area": "태평1동, 태평2동, 태평3동, 태평4동, 산성동, 양지동, 복정동, 위례동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "성남시",
+    "election_district": "성남시제3선거구(중원구)",
+    "election_area": "성남동, 상대원1동, 상대원2동, 상대원3동, 하대원동, 도촌동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "성남시",
+    "election_district": "성남시제4선거구(중원구)",
+    "election_area": "중앙동, 금광1동, 금광2동, 은행1동, 은행2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "성남시",
+    "election_district": "성남시제5선거구(분당구)",
+    "election_area": "이매1동, 이매2동, 야탑1동, 야탑2동, 야탑3동, 삼평동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "성남시",
+    "election_district": "성남시제6선거구(분당구)",
+    "election_area": "서현1동, 서현2동, 판교동, 백현동, 운중동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "성남시",
+    "election_district": "성남시제7선거구(분당구)",
+    "election_area": "분당동, 수내3동, 정자2동, 정자3동, 구미동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "성남시",
+    "election_district": "성남시제8선거구(분당구)",
+    "election_area": "수내1동, 수내2동, 정자동, 정자1동, 금곡동, 구미1동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "부천시",
+    "election_district": "부천시제1선거구(원미구)",
+    "election_area": "심곡1동, 심곡2동, 심곡3동, 원미1동, 원미2동, 춘의동, 도당동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "부천시",
+    "election_district": "부천시제2선거구(오정구)",
+    "election_area": "원종1동, 원종2동, 오정동, 신흥동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "부천시",
+    "election_district": "부천시제3선거구(원미구)",
+    "election_area": "중동, 상동, 상1동, 상2동, 상3동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "부천시",
+    "election_district": "부천시제4선거구(원미구)",
+    "election_area": "약대동, 중1동, 중2동, 중3동, 중4동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "부천시",
+    "election_district": "부천시제5선거구(소사구)",
+    "election_area": "심곡본1동, 심곡본동, 송내1동, 송내2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "부천시",
+    "election_district": "부천시제6선거구(소사구)",
+    "election_area": "범박동, 옥길동, 괴안동, 역곡3동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "부천시",
+    "election_district": "부천시제7선거구(오정구)",
+    "election_area": "성곡동, 고강본동, 고강1동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "부천시",
+    "election_district": "부천시제8선거구(소사구)",
+    "election_area": "소사본동, 소사본1동, 역곡1동(부천시원미구), 역곡2동(부천시원미구), 소사동(부천시원미구) "
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "남양주시",
+    "election_district": "남양주시제1선거구(남양주시)",
+    "election_area": "화도읍, 수동면"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "남양주시",
+    "election_district": "남양주시제2선거구(남양주시)",
+    "election_area": "호평동, 평내동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "남양주시",
+    "election_district": "남양주시제3선거구(남양주시)",
+    "election_area": "진접읍"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "남양주시",
+    "election_district": "남양주시제4선거구(남양주시)",
+    "election_area": "오남읍"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "남양주시",
+    "election_district": "남양주시제5선거구(남양주시)",
+    "election_area": "별내면, 별내동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "남양주시",
+    "election_district": "남양주시제6선거구(남양주시)",
+    "election_area": "다산1동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "남양주시",
+    "election_district": "남양주시제7선거구(남양주시)",
+    "election_area": "진건읍, 퇴계원읍, 양정동, 다산2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "남양주시",
+    "election_district": "남양주시제8선거구(남양주시)",
+    "election_area": "와부읍, 조안면, 금곡동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안산시",
+    "election_district": "안산시제1선거구(상록구)",
+    "election_area": "사동, 사이동, 해양동, 본오3동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안산시",
+    "election_district": "안산시제2선거구(상록구)",
+    "election_area": "본오1동, 본오2동, 반월동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안산시",
+    "election_district": "안산시제3선거구(상록구)",
+    "election_area": "일동, 이동, 성포동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안산시",
+    "election_district": "안산시제4선거구(상록구)",
+    "election_area": "부곡동, 월피동, 안산동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안산시",
+    "election_district": "안산시제5선거구(단원구)",
+    "election_area": "고잔동, 중앙동, 호수동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안산시",
+    "election_district": "안산시제6선거구(단원구)",
+    "election_area": "와동, 선부3동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안산시",
+    "election_district": "안산시제7선거구(단원구)",
+    "election_area": "원곡동, 백운동, 신길동, 선부1동, 선부2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안산시",
+    "election_district": "안산시제8선거구(단원구)",
+    "election_area": "초지동, 대부동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "평택시",
+    "election_district": "평택시제1선거구(평택시)",
+    "election_area": "진위면, 서탄면, 지산동, 송북동, 신장1동, 신장2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "평택시",
+    "election_district": "평택시제2선거구(평택시)",
+    "election_area": "중앙동, 서정동, 송탄동, 통복동, 세교동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "평택시",
+    "election_district": "평택시제3선거구(평택시)",
+    "election_area": "비전1동, 동삭동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "평택시",
+    "election_district": "평택시제4선거구(평택시)",
+    "election_area": "신평동, 원평동, 비전2동, 용이동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "평택시",
+    "election_district": "평택시제5선거구(평택시)",
+    "election_area": "안중읍, 포승읍, 청북읍, 오성면, 현덕면"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "평택시",
+    "election_district": "평택시제6선거구(평택시)",
+    "election_area": "팽성읍, 고덕면, 고덕동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안양시",
+    "election_district": "안양시제1선거구(만안구)",
+    "election_area": "안양1동, 안양3동, 안양4동, 안양5동, 안양6동, 안양7동, 안양8동, 안양9동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안양시",
+    "election_district": "안양시제2선거구(만안구)",
+    "election_area": "안양2동, 석수1동, 석수2동, 충훈동, 박달동, 호현동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안양시",
+    "election_district": "안양시제3선거구(동안구)",
+    "election_area": "비산1동, 비산2동, 비산3동, 부흥동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안양시",
+    "election_district": "안양시제4선거구(동안구)",
+    "election_area": "달안동, 관양동, 인덕원동, 부림동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안양시",
+    "election_district": "안양시제5선거구(동안구)",
+    "election_area": "평촌동, 평안동, 귀인동, 범계동, 갈산동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안양시",
+    "election_district": "안양시제6선거구(동안구)",
+    "election_area": "호계1동, 호계2동, 호계3동, 신촌동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "시흥시",
+    "election_district": "시흥시제1선거구(시흥시)",
+    "election_area": "신천동, 은행동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "시흥시",
+    "election_district": "시흥시제2선거구(시흥시)",
+    "election_area": "대야동, 매화동, 목감동, 과림동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "시흥시",
+    "election_district": "시흥시제3선거구(시흥시)",
+    "election_area": "신현동, 연성동, 장곡동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "시흥시",
+    "election_district": "시흥시제4선거구(시흥시)",
+    "election_area": "군자동, 월곶동, 정왕본동, 정왕1동, 정왕2동, 능곡동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "시흥시",
+    "election_district": "시흥시제5선거구(시흥시)",
+    "election_area": "정왕3동, 정왕4동, 거북섬동, 배곧1동, 배곧2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "파주시",
+    "election_district": "파주시제1선거구(파주시)",
+    "election_area": "운정1동, 운정4동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "파주시",
+    "election_district": "파주시제2선거구(파주시)",
+    "election_area": "교하동, 운정2동, 운정5동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "파주시",
+    "election_district": "파주시제3선거구(파주시)",
+    "election_area": "운정3동, 운정6동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "파주시",
+    "election_district": "파주시제4선거구(파주시)",
+    "election_area": "문산읍, 법원읍, 탄현면, 적성면, 파평면, 장단면"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "파주시",
+    "election_district": "파주시제5선거구(파주시)",
+    "election_area": "조리읍, 파주읍, 광탄면, 월롱면, 금촌1동, 금촌2동, 금촌3동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "김포시",
+    "election_district": "김포시제1선거구(김포시)",
+    "election_area": "고촌읍, 사우동, 풍무동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "김포시",
+    "election_district": "김포시제2선거구(김포시)",
+    "election_area": "김포본동, 장기동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "김포시",
+    "election_district": "김포시제3선거구(김포시)",
+    "election_area": "통진읍, 양촌읍, 대곶면, 월곶면, 하성면, 구래동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "김포시",
+    "election_district": "김포시제4선거구(김포시)",
+    "election_area": "장기본동, 마산동, 운양동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "의정부시",
+    "election_district": "의정부시제1선거구(의정부시)",
+    "election_area": "의정부1동, 가능동, 흥선동, 녹양동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "의정부시",
+    "election_district": "의정부시제2선거구(의정부시)",
+    "election_area": "의정부2동, 호원1동, 호원2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "의정부시",
+    "election_district": "의정부시제3선거구(의정부시)",
+    "election_area": "장암동, 신곡1동, 신곡2동, 자금동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "의정부시",
+    "election_district": "의정부시제4선거구(의정부시)",
+    "election_area": "송산1동, 송산2동, 송산3동, 고산동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "광주시",
+    "election_district": "광주시제1선거구(광주시)",
+    "election_area": "퇴촌면, 남종면, 남한산성면, 송정동, 탄벌동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "광주시",
+    "election_district": "광주시제2선거구(광주시)",
+    "election_area": "경안동, 쌍령동, 광남1동, 광남2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "광주시",
+    "election_district": "광주시제3선거구(광주시)",
+    "election_area": "오포1동, 오포2동, 신현동, 능평동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "광주시",
+    "election_district": "광주시제4선거구(광주시)",
+    "election_area": "초월읍, 곤지암읍, 도척면"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "하남시",
+    "election_district": "하남시제1선거구(하남시)",
+    "election_area": "감북동, 감일동, 위례동, 춘궁동, 초이동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "하남시",
+    "election_district": "하남시제2선거구(하남시)",
+    "election_area": "천현동, 신장1동, 신장2동, 덕풍1동, 덕풍2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "하남시",
+    "election_district": "하남시제3선거구(하남시)",
+    "election_area": "미사1동, 미사2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "하남시",
+    "election_district": "하남시제4선거구(하남시)",
+    "election_area": "덕풍3동, 미사3동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "양주시",
+    "election_district": "양주시제1선거구(양주시)",
+    "election_area": "백석읍, 광적면, 장흥면, 양주1동, 양주2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "양주시",
+    "election_district": "양주시제2선거구(양주시)",
+    "election_area": "은현면, 남면, 회천2동, 회천3동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "양주시",
+    "election_district": "양주시제3선거구(양주시)",
+    "election_area": "회천1동, 옥정1동, 옥정2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "광명시",
+    "election_district": "광명시제1선거구(광명시)",
+    "election_area": "광명1동, 광명2동, 광명3동, 철산1동, 철산2동, 철산3동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "광명시",
+    "election_district": "광명시제2선거구(양주시)",
+    "election_area": "광명4동, 광명5동, 광명6동, 광명7동, 철산4동, 학온동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "광명시",
+    "election_district": "광명시제3선거구(양주시)",
+    "election_area": "하안1동, 하안2동, 하안3동, 하안4동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "광명시",
+    "election_district": "광명시제4선거구(양주시)",
+    "election_area": "소하1동, 소하2동, 일직동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "군포시",
+    "election_district": "군포시제1선거구(군포시)",
+    "election_area": "군포1동, 산본1동, 금정동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "군포시",
+    "election_district": "군포시제2선거구(군포시)",
+    "election_area": "군포2동, 대야동, 송부동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "군포시",
+    "election_district": "군포시제3선거구(군포시)",
+    "election_area": "산본2동, 궁내동, 광정동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "군포시",
+    "election_district": "군포시제4선거구(군포시)",
+    "election_area": "재궁동, 오금동, 수리동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "오산시",
+    "election_district": "오산시제1선거구(오산시)",
+    "election_area": "중앙동, 신장1동, 신장2동, 세마동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "오산시",
+    "election_district": "오산시제2선거구(오산시)",
+    "election_area": "대원1동, 대원2동, 남촌동, 초평동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "이천시",
+    "election_district": "이천시제1선거구(이천시)",
+    "election_area": "신둔면, 백사면, 마장면, 창전동, 증포동, 중리동, 관고동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "이천시",
+    "election_district": "이천시제2선거구(이천시)",
+    "election_area": "장호원읍, 부발읍, 호법면, 대월면, 모가면, 설성면, 율면"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안성시",
+    "election_district": "안성시제1선거구(안성시)",
+    "election_area": "공도읍, 미양면, 대덕면, 양성면, 원곡면, 고삼면, 안성3동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "안성시",
+    "election_district": "안성시제2선거구(이천시)",
+    "election_area": "보개면, 금광면, 서운면, 일죽면, 죽산면, 삼죽면, 안성1동, 안성2동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "구리시",
+    "election_district": "구리시제1선거구(구리시)",
+    "election_area": "갈매동, 동구동, 인창동, 교문1동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "구리시",
+    "election_district": "구리시제2선거구(구리시)",
+    "election_area": "교문2동, 수택1동, 수택2동, 수택3동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "포천시",
+    "election_district": "포천시제1선거구(포천시)",
+    "election_area": "군내면, 신북면, 창수면, 영중면, 영북면, 관인면, 포천동, 선단동 "
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "포천시",
+    "election_district": "포천시제2선거구(포천시)",
+    "election_area": "소흘읍, 내촌면, 가산면, 일동면, 이동면, 화현면"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "의왕시",
+    "election_district": "의왕시제1선거구(의왕시)",
+    "election_area": "고천동, 부곡동, 오전동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "의왕시",
+    "election_district": "의왕시제2선거구(의왕시)",
+    "election_area": "내손1동, 내손2동, 청계동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "양평군",
+    "election_district": "양평군제1선거구(양평군)",
+    "election_area": "양평읍, 양서면, 옥천면, 서종면"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "양평군",
+    "election_district": "양평군제2선거구(양평군)",
+    "election_area": "강상면, 강하면, 단월면, 청운면, 양동면, 지평면, 용문면, 개군면"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "여주시",
+    "election_district": "여주시제1선거구(여주시)",
+    "election_area": "가남읍, 점동면, 세종대왕면, 북내면, 강천면, 여흥동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "여주시",
+    "election_district": "여주시제2선거구(여주시)",
+    "election_area": "흥천면, 금사면, 산북면, 대신면, 중앙동, 오학동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "동두천시",
+    "election_district": "동두천시제1선거구(동두천시)",
+    "election_area": "생연2동, 송내동, 상패동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "동두천시",
+    "election_district": "동두천시제2선거구(동두천시)",
+    "election_area": "생연1동, 중앙동, 보산동, 불현동, 소요동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "과천시",
+    "election_district": "과천시선거구(과천시)",
+    "election_area": "중앙동, 원문동, 갈현동, 별양동, 부림동, 과천동, 문원동"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "가평군",
+    "election_district": "가평군선거구(가평군)",
+    "election_area": "가평읍, 설악면, 청평면, 상면, 조종면, 북면"
+  },
+  {
+    "parent_council_id": "NULL",
+    "council_name": "경기도의회",
+    "council_type": "광역의회",
+    "city_name": "연천군",
+    "election_district": "연천군선거구(연천군)",
+    "election_area": "연천읍, 전곡읍, 군남면, 청산면, 백학면, 미산면, 왕징면, 신서면, 중면, 장남면"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "수원시의회",
+    "council_type": "기초의회",
+    "city_name": "수원시",
+    "election_district": "수원시가선거구(장안구)",
+    "election_area": "영화동, 조원1동, 연무동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "수원시의회",
+    "council_type": "기초의회",
+    "city_name": "수원시",
+    "election_district": "수원시나선거구(장안구)",
+    "election_area": "파장동, 송죽동, 조원2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "수원시의회",
+    "council_type": "기초의회",
+    "city_name": "수원시",
+    "election_district": "수원시다선거구(장안구)",
+    "election_area": "정자1동, 정자2동, 정자3동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "수원시의회",
+    "council_type": "기초의회",
+    "city_name": "수원시",
+    "election_district": "수원시라선거구(권선구)",
+    "election_area": "서둔동, 구운동, 입북동, 율천동(수원시장안구)"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "수원시의회",
+    "council_type": "기초의회",
+    "city_name": "수원시",
+    "election_district": "수원시마선거구(권선구)",
+    "election_area": "평동, 금곡동, 호매실동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "수원시의회",
+    "council_type": "기초의회",
+    "city_name": "수원시",
+    "election_district": "수원시바선거구(팔달구)",
+    "election_area": "매교동, 매산동, 고등동, 화서1동, 화서2동, 세류1동(수원시권선구)"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "수원시의회",
+    "council_type": "기초의회",
+    "city_name": "수원시",
+    "election_district": "수원시사선거구(팔달구)",
+    "election_area": "행궁동, 지동, 우만1동, 우만2동, 인계동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "수원시의회",
+    "council_type": "기초의회",
+    "city_name": "수원시",
+    "election_district": "수원시아선거구(영통구)",
+    "election_area": "매탄1동, 매탄2동, 매탄3동, 매탄4동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "수원시의회",
+    "council_type": "기초의회",
+    "city_name": "수원시",
+    "election_district": "수원시자선거구(영통구)",
+    "election_area": "원천동, 영통1동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "수원시의회",
+    "council_type": "기초의회",
+    "city_name": "수원시",
+    "election_district": "수원시차선거구(영통구)",
+    "election_area": "광교1동, 광교2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "수원시의회",
+    "council_type": "기초의회",
+    "city_name": "수원시",
+    "election_district": "수원시카선거구(권선구)",
+    "election_area": "세류2동, 세류3동, 권선1동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "수원시의회",
+    "council_type": "기초의회",
+    "city_name": "수원시",
+    "election_district": "수원시타선거구(권선구)",
+    "election_area": "권선2동, 곡선동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "수원시의회",
+    "council_type": "기초의회",
+    "city_name": "수원시",
+    "election_district": "수원시파선거구(영통구)",
+    "election_area": "영통2동, 영통3동, 망포1동, 망포2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "용인시의회",
+    "council_type": "기초의회",
+    "city_name": "용인시",
+    "election_district": "용인시가선거구(처인구)",
+    "election_area": "포곡읍, 모현읍, 역북동, 유림1동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "용인시의회",
+    "council_type": "기초의회",
+    "city_name": "용인시",
+    "election_district": "용인시나선거구(처인구)",
+    "election_area": "이동읍, 남사읍, 중앙동, 삼가동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "용인시의회",
+    "council_type": "기초의회",
+    "city_name": "용인시",
+    "election_district": "용인시다선거구(처인구)",
+    "election_area": "원삼면, 백암면, 양지읍, 유림2동, 동부동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "용인시의회",
+    "council_type": "기초의회",
+    "city_name": "용인시",
+    "election_district": "용인시라선거구(기흥구)",
+    "election_area": "신갈동, 영덕1동, 영덕2동, 기흥동, 서농동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "용인시의회",
+    "council_type": "기초의회",
+    "city_name": "용인시",
+    "election_district": "용인시마선거구(기흥구)",
+    "election_area": "구갈동, 상갈동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "용인시의회",
+    "council_type": "기초의회",
+    "city_name": "용인시",
+    "election_district": "용인시바선거구(기흥구)",
+    "election_area": "보라동, 동백2동, 상하동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "용인시의회",
+    "council_type": "기초의회",
+    "city_name": "용인시",
+    "election_district": "용인시사선거구(수지구)",
+    "election_area": "상현1동, 상현3동, 성복동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "용인시의회",
+    "council_type": "기초의회",
+    "city_name": "용인시",
+    "election_district": "용인시아선거구(수지구)",
+    "election_area": "풍천1동, 동천동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "용인시의회",
+    "council_type": "기초의회",
+    "city_name": "용인시",
+    "election_district": "용인시자선거구(수지구)",
+    "election_area": "풍덕천2동, 신봉동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "용인시의회",
+    "council_type": "기초의회",
+    "city_name": "용인시",
+    "election_district": "용인시차선거구(기흥구)",
+    "election_area": "구성동, 마북동, 동백1동, 동백3동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "용인시의회",
+    "council_type": "기초의회",
+    "city_name": "용인시",
+    "election_district": "용인시카선거구(기흥구)",
+    "election_area": "보정동, 죽전1동(용인시수지구), 죽전2동(용인시수지구), 죽전3동(용인시수지구), 상현2동(용인시수지구)"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "고양시의회",
+    "council_type": "기초의회",
+    "city_name": "고양시",
+    "election_district": "고양시가선거구(덕양구)",
+    "election_area": "주교동, 성사1동, 성사2동, 식사동(고양시일산동구)"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "고양시의회",
+    "council_type": "기초의회",
+    "city_name": "고양시",
+    "election_district": "고양시나선거구(덕양구)",
+    "election_area": "원신동, 흥도동, 고양동, 관산동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "고양시의회",
+    "council_type": "기초의회",
+    "city_name": "고양시",
+    "election_district": "고양시다선거구(덕양구)",
+    "election_area": "화정1동, 화정2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "고양시의회",
+    "council_type": "기초의회",
+    "city_name": "고양시",
+    "election_district": "고양시라선거구(덕양구)",
+    "election_area": "능곡동, 행주동, 행신1동, 행신3동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "고양시의회",
+    "council_type": "기초의회",
+    "city_name": "고양시",
+    "election_district": "고양시마선거구(덕양구)",
+    "election_area": "행신2동, 행신4동, 화전동, 대덕동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "고양시의회",
+    "council_type": "기초의회",
+    "city_name": "고양시",
+    "election_district": "고양시바선거구(덕양구)",
+    "election_area": "효자동, 삼송1동, 삼송2동, 창릉동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "고양시의회",
+    "council_type": "기초의회",
+    "city_name": "고양시",
+    "election_district": "고양시사선거구(일산동구)",
+    "election_area": "중산1동, 중산2동, 고봉동, 일산2동(고양시일산서구)"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "고양시의회",
+    "council_type": "기초의회",
+    "city_name": "고양시",
+    "election_district": "고양시아선거구(일산동구)",
+    "election_area": "정발산동, 풍산동, 장항1동, 장항2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "고양시의회",
+    "council_type": "기초의회",
+    "city_name": "고양시",
+    "election_district": "고양시자선거구(일산동구)",
+    "election_area": "백석1동, 백석2동, 마두1동, 마두2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "고양시의회",
+    "council_type": "기초의회",
+    "city_name": "고양시",
+    "election_district": "고양시차선거구(일산서구)",
+    "election_area": "일산1동, 탄현1동, 탄현2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "고양시의회",
+    "council_type": "기초의회",
+    "city_name": "고양시",
+    "election_district": "고양시카선거구(일산서구)",
+    "election_area": "주엽1동, 주엽2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "고양시의회",
+    "council_type": "기초의회",
+    "city_name": "고양시",
+    "election_district": "고양시타선거구(일산서구)",
+    "election_area": "일산3동, 대화동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "고양시의회",
+    "council_type": "기초의회",
+    "city_name": "고양시",
+    "election_district": "고양시파선거구(일산서구)",
+    "election_area": "송포동, 덕이동, 가좌동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "화성시의회",
+    "council_type": "기초의회",
+    "city_name": "화성시",
+    "election_district": "화성시가선거구(만세구)",
+    "election_area": "향남읍, 양감면, 정남면(화성시효행구)"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "화성시의회",
+    "council_type": "기초의회",
+    "city_name": "화성시",
+    "election_district": "화성시나선거구(만세구)",
+    "election_area": "우정읍, 팔탄면, 장안면, 매송면(화성시효행구), 비봉면(화성시효행구)"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "화성시의회",
+    "council_type": "기초의회",
+    "city_name": "화성시",
+    "election_district": "화성시다선거구(동탄구)",
+    "election_area": "동탄1동, 동탄2동, 동탄5동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "화성시의회",
+    "council_type": "기초의회",
+    "city_name": "화성시",
+    "election_district": "화성시라선거구(동탄구)",
+    "election_area": "동탄4동, 동탄6동, 동탄8동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "화성시의회",
+    "council_type": "기초의회",
+    "city_name": "화성시",
+    "election_district": "화성시마선거구(동탄구)",
+    "election_area": "동탄7동, 동탄9동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "화성시의회",
+    "council_type": "기초의회",
+    "city_name": "화성시",
+    "election_district": "화성시바선거구(효행구)",
+    "election_area": "봉담읍, 기배동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "화성시의회",
+    "council_type": "기초의회",
+    "city_name": "화성시",
+    "election_district": "화성시사선거구(병점구)",
+    "election_area": "진안동, 병점1동, 병점2동, 화산동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "화성시의회",
+    "council_type": "기초의회",
+    "city_name": "화성시",
+    "election_district": "화성시아선거구(병점구)",
+    "election_area": "반월동, 동탄3동(화성시동탄구)"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "화성시의회",
+    "council_type": "기초의회",
+    "city_name": "화성시",
+    "election_district": "화성시자선거구(만세구)",
+    "election_area": "남양읍, 마도면, 송산면, 서신면, 새솔동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "성남시의회",
+    "council_type": "기초의회",
+    "city_name": "성남시",
+    "election_district": "성남시가선거구(수정구)",
+    "election_area": "신흥1동, 신흥2동, 신흥3동, 수진1동, 수진2동, 단대동, 신촌동, 고등동, 시흥동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "성남시의회",
+    "council_type": "기초의회",
+    "city_name": "성남시",
+    "election_district": "성남시나선거구(수정구)",
+    "election_area": "태평1동, 태평2동, 태평3동, 태평4동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "성남시의회",
+    "council_type": "기초의회",
+    "city_name": "성남시",
+    "election_district": "성남시다선거구(수정구)",
+    "election_area": "산성동, 양지동, 복정동, 위례동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "성남시의회",
+    "council_type": "기초의회",
+    "city_name": "성남시",
+    "election_district": "성남시라선거구(중원구)",
+    "election_area": "성남동, 상대원1동, 상대원2동, 상대원3동, 하대원동, 도촌동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "성남시의회",
+    "council_type": "기초의회",
+    "city_name": "성남시",
+    "election_district": "성남시마선거구(중원구)",
+    "election_area": "중앙동, 금광1동, 금광2동, 은행1동, 은행2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "성남시의회",
+    "council_type": "기초의회",
+    "city_name": "성남시",
+    "election_district": "성남시바선거구(분당구)",
+    "election_area": "이매1동, 이매2동, 삼평동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "성남시의회",
+    "council_type": "기초의회",
+    "city_name": "성남시",
+    "election_district": "성남시사선거구(분당구)",
+    "election_area": "야탑1동, 야탑2동, 야탑3동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "성남시의회",
+    "council_type": "기초의회",
+    "city_name": "성남시",
+    "election_district": "성남시아선거구(분당구)",
+    "election_area": "서현1동, 서현2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "성남시의회",
+    "council_type": "기초의회",
+    "city_name": "성남시",
+    "election_district": "성남시자선거구(분당구)",
+    "election_area": "판교동, 백현동, 운중동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "성남시의회",
+    "council_type": "기초의회",
+    "city_name": "성남시",
+    "election_district": "성남시차선거구(분당구)",
+    "election_area": "분당동, 수내3동, 정자2동, 정자3동, 구미동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "성남시의회",
+    "council_type": "기초의회",
+    "city_name": "성남시",
+    "election_district": "성남시카선거구(분당구)",
+    "election_area": "수내1동, 수내2동, 정자1동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "성남시의회",
+    "council_type": "기초의회",
+    "city_name": "성남시",
+    "election_district": "성남시타선거구(분당구)",
+    "election_area": "정자동, 금곡동, 구미1동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "부천시의회",
+    "council_type": "기초의회",
+    "city_name": "부천시",
+    "election_district": "부천시가선거구(원미구)",
+    "election_area": "심곡1동, 심곡2동, 심곡3동, 원미1동, 원미2동, 춘의동, 도당동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "부천시의회",
+    "council_type": "기초의회",
+    "city_name": "부천시",
+    "election_district": "부천시나선거구(오정구)",
+    "election_area": "원종1동, 원종2동, 오정동, 신흥동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "부천시의회",
+    "council_type": "기초의회",
+    "city_name": "부천시",
+    "election_district": "부천시다선거구(원미구)",
+    "election_area": "중동, 상동, 상1동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "부천시의회",
+    "council_type": "기초의회",
+    "city_name": "부천시",
+    "election_district": "부천시라선거구(원미구)",
+    "election_area": "상2동, 상3동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "부천시의회",
+    "council_type": "기초의회",
+    "city_name": "부천시",
+    "election_district": "부천시마선거구(원미구)",
+    "election_area": "약대동, 중1동, 중2동, 중3동, 중4동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "부천시의회",
+    "council_type": "기초의회",
+    "city_name": "부천시",
+    "election_district": "부천시바선거구(소사구)",
+    "election_area": "심곡본1동, 심곡본동, 송내1동, 송내2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "부천시의회",
+    "council_type": "기초의회",
+    "city_name": "부천시",
+    "election_district": "부천시사선거구(소사구)",
+    "election_area": "범박동, 옥길동, 괴안동, 역곡3동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "부천시의회",
+    "council_type": "기초의회",
+    "city_name": "부천시",
+    "election_district": "부천시아선거구(오정구)",
+    "election_area": "성곡동, 고강본동, 고강1동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "부천시의회",
+    "council_type": "기초의회",
+    "city_name": "부천시",
+    "election_district": "부천시자선거구(소사구)",
+    "election_area": "소사본동, 소사본1동, 역곡1동(부천시원미구), 역곡2동(부천시원미구), 소사동(부천시원미구)"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "남양주시의회",
+    "council_type": "기초의회",
+    "city_name": "남양주시",
+    "election_district": "남양주시가선거구(남양주시)",
+    "election_area": "화도읍, 수동면"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "남양주시의회",
+    "council_type": "기초의회",
+    "city_name": "남양주시",
+    "election_district": "남양주시나선거구(남양주시)",
+    "election_area": "호평동, 평내동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "남양주시의회",
+    "council_type": "기초의회",
+    "city_name": "남양주시",
+    "election_district": "남양주시다선거구(남양주시)",
+    "election_area": "진접읍"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "남양주시의회",
+    "council_type": "기초의회",
+    "city_name": "남양주시",
+    "election_district": "남양주시라선거구(남양주시)",
+    "election_area": "오남읍"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "남양주시의회",
+    "council_type": "기초의회",
+    "city_name": "남양주시",
+    "election_district": "남양주시마선거구(남양주시)",
+    "election_area": "별내면, 별내동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "남양주시의회",
+    "council_type": "기초의회",
+    "city_name": "남양주시",
+    "election_district": "남양주시바선거구(남양주시)",
+    "election_area": "양정동, 다산1동, 다산2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "남양주시의회",
+    "council_type": "기초의회",
+    "city_name": "남양주시",
+    "election_district": "남양주시사선거구(남양주시)",
+    "election_area": "와부읍, 진건읍, 퇴계원읍, 조안면, 금곡동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안산시의회",
+    "council_type": "기초의회",
+    "city_name": "안산시",
+    "election_district": "안산시가선거구(상록구)",
+    "election_area": "사동, 사이동, 해양동, 본오3동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안산시의회",
+    "council_type": "기초의회",
+    "city_name": "안산시",
+    "election_district": "안산시나선거구(상록구)",
+    "election_area": "본오1동, 본오2동, 반월동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안산시의회",
+    "council_type": "기초의회",
+    "city_name": "안산시",
+    "election_district": "안산시다선거구(상록구)",
+    "election_area": "일동, 이동, 성포동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안산시의회",
+    "council_type": "기초의회",
+    "city_name": "안산시",
+    "election_district": "안산시라선거구(상록구)",
+    "election_area": "부곡동, 월피동, 안산동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안산시의회",
+    "council_type": "기초의회",
+    "city_name": "안산시",
+    "election_district": "안산시마선거구(단원구)",
+    "election_area": "고잔동, 중앙동, 호수동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안산시의회",
+    "council_type": "기초의회",
+    "city_name": "안산시",
+    "election_district": "안산시바선거구(단원구)",
+    "election_area": "와동, 선부3동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안산시의회",
+    "council_type": "기초의회",
+    "city_name": "안산시",
+    "election_district": "안산시사선거구(단원구)",
+    "election_area": "원곡동, 백운동, 신길동, 선부1동, 선부2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안산시의회",
+    "council_type": "기초의회",
+    "city_name": "안산시",
+    "election_district": "안산시아선거구(단원구)",
+    "election_area": "초지동, 대부동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "평택시의회",
+    "council_type": "기초의회",
+    "city_name": "평택시",
+    "election_district": "평택시가선거구(평택시)",
+    "election_area": "진위면, 서탄면, 지산동, 송북동, 신장1동, 신장2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "평택시의회",
+    "council_type": "기초의회",
+    "city_name": "평택시",
+    "election_district": "평택시나선거구(평택시)",
+    "election_area": "중앙동, 서정동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "평택시의회",
+    "council_type": "기초의회",
+    "city_name": "평택시",
+    "election_district": "평택시다선거구(평택시)",
+    "election_area": "송탄동, 통복동, 세교동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "평택시의회",
+    "council_type": "기초의회",
+    "city_name": "평택시",
+    "election_district": "평택시라선거구(평택시)",
+    "election_area": "비전1동, 동삭동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "평택시의회",
+    "council_type": "기초의회",
+    "city_name": "평택시",
+    "election_district": "평택시마선거구(평택시)",
+    "election_area": "신평동, 원평동, 비전2동, 용이동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "평택시의회",
+    "council_type": "기초의회",
+    "city_name": "평택시",
+    "election_district": "평택시바선거구(평택시)",
+    "election_area": "안중읍, 포승읍, 청북읍, 오성면, 현덕면"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "평택시의회",
+    "council_type": "기초의회",
+    "city_name": "평택시",
+    "election_district": "평택시사선거구(평택시)",
+    "election_area": "팽성읍, 고덕면, 고덕동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안양시의회",
+    "council_type": "기초의회",
+    "city_name": "안양시",
+    "election_district": "안양시가선거구(만안구)",
+    "election_area": "안양1동, 안양3동, 안양4동, 안양5동, 안양9동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안양시의회",
+    "council_type": "기초의회",
+    "city_name": "안양시",
+    "election_district": "안양시나선거구(만안구)",
+    "election_area": "안양6동, 안양7동, 안양8동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안양시의회",
+    "council_type": "기초의회",
+    "city_name": "안양시",
+    "election_district": "안양시다선거구(만안구)",
+    "election_area": "안양2동, 박달동, 호현동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안양시의회",
+    "council_type": "기초의회",
+    "city_name": "안양시",
+    "election_district": "안양시라선거구(만안구)",
+    "election_area": "석수1동, 석수2동, 충훈동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안양시의회",
+    "council_type": "기초의회",
+    "city_name": "안양시",
+    "election_district": "안양시마선거구(동안구)",
+    "election_area": "비산1동, 비산2동, 비산3동, 부흥동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안양시의회",
+    "council_type": "기초의회",
+    "city_name": "안양시",
+    "election_district": "안양시바선거구(동안구)",
+    "election_area": "달안동, 관양동, 인덕원동, 부림동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안양시의회",
+    "council_type": "기초의회",
+    "city_name": "안양시",
+    "election_district": "안양시사선거구(동안구)",
+    "election_area": "평촌동, 평안동, 귀인동, 범계동, 갈산동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안양시의회",
+    "council_type": "기초의회",
+    "city_name": "안양시",
+    "election_district": "안양시아선거구(동안구)",
+    "election_area": "호계1동, 호계2동, 호계3동, 신촌동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "시흥시의회",
+    "council_type": "기초의회",
+    "city_name": "시흥시",
+    "election_district": "시흥시가선거구(시흥구)",
+    "election_area": "신천동, 은행동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "시흥시의회",
+    "council_type": "기초의회",
+    "city_name": "시흥시",
+    "election_district": "시흥시나선거구(시흥구)",
+    "election_area": "대야동, 매화동, 목감동, 과림동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "시흥시의회",
+    "council_type": "기초의회",
+    "city_name": "시흥시",
+    "election_district": "시흥시다선거구(시흥구)",
+    "election_area": "신현동, 연성동, 장곡동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "시흥시의회",
+    "council_type": "기초의회",
+    "city_name": "시흥시",
+    "election_district": "시흥시라선거구(시흥구)",
+    "election_area": "군자동, 월곶동, 정왕본동, 정왕1동, 정왕2동, 능곡동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "시흥시의회",
+    "council_type": "기초의회",
+    "city_name": "시흥시",
+    "election_district": "시흥시마선거구(시흥구)",
+    "election_area": "정왕3동, 정왕4동, 거북섬동, 배곧1동, 배곧2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "파주시의회",
+    "council_type": "기초의회",
+    "city_name": "파주시",
+    "election_district": "파주시가선거구(파주시)",
+    "election_area": "운정1동, 운정4동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "파주시의회",
+    "council_type": "기초의회",
+    "city_name": "파주시",
+    "election_district": "파주시나선거구(파주시)",
+    "election_area": "교하동, 운정2동, 운정5동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "파주시의회",
+    "council_type": "기초의회",
+    "city_name": "파주시",
+    "election_district": "파주시다선거구(파주시)",
+    "election_area": "운정3동, 운정6동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "파주시의회",
+    "council_type": "기초의회",
+    "city_name": "파주시",
+    "election_district": "파주시라선거구(파주시)",
+    "election_area": "문산읍, 법원읍, 탄현면, 적성면, 파평면, 장단면"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "파주시의회",
+    "council_type": "기초의회",
+    "city_name": "파주시",
+    "election_district": "파주시마선거구(파주시)",
+    "election_area": "조리읍, 파주읍, 광탄면, 월롱면, 금촌1동, 금촌2동, 금촌3동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "김포시의회",
+    "council_type": "기초의회",
+    "city_name": "김포시",
+    "election_district": "김포시가선거구(김포시)",
+    "election_area": "고촌읍, 사우동, 풍무동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "김포시의회",
+    "council_type": "기초의회",
+    "city_name": "김포시",
+    "election_district": "김포시나선거구(김포시)",
+    "election_area": "김포본동, 장기동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "김포시의회",
+    "council_type": "기초의회",
+    "city_name": "김포시",
+    "election_district": "김포시다선거구(김포시)",
+    "election_area": "통진읍, 양촌읍, 대곶면, 월곶면, 하성면, 구래동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "김포시의회",
+    "council_type": "기초의회",
+    "city_name": "김포시",
+    "election_district": "김포시라선거구(김포시)",
+    "election_area": "장기본동, 마산동, 운양동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "의정부시의회",
+    "council_type": "기초의회",
+    "city_name": "의정부시",
+    "election_district": "의정부시가선거구(의정부시)",
+    "election_area": "의정부1동, 가능동, 흥선동, 녹양동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "의정부시의회",
+    "council_type": "기초의회",
+    "city_name": "의정부시",
+    "election_district": "의정부시나선거구(의정부시)",
+    "election_area": "의정부2동, 호원1동, 호원2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "의정부시의회",
+    "council_type": "기초의회",
+    "city_name": "의정부시",
+    "election_district": "의정부시다선거구(의정부시)",
+    "election_area": "장암동, 신곡1동, 신곡2동, 자금동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "의정부시의회",
+    "council_type": "기초의회",
+    "city_name": "의정부시",
+    "election_district": "의정부시라선거구(의정부시)",
+    "election_area": "송산1동, 송산2동, 송산3동, 고산동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "광주시의회",
+    "council_type": "기초의회",
+    "city_name": "광주시",
+    "election_district": "광주시가선거구(광주시)",
+    "election_area": "퇴촌면, 남종면, 남한산성면, 송정동, 탄벌동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "광주시의회",
+    "council_type": "기초의회",
+    "city_name": "광주시",
+    "election_district": "광주시나선거구(광주시)",
+    "election_area": "경안동, 쌍령동, 광남1동, 광남2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "광주시의회",
+    "council_type": "기초의회",
+    "city_name": "광주시",
+    "election_district": "광주시다선거구(광주시)",
+    "election_area": "오포1동, 오포2동, 신현동, 능평동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "광주시의회",
+    "council_type": "기초의회",
+    "city_name": "광주시",
+    "election_district": "광주시라선거구(광주시)",
+    "election_area": "초월읍, 곤지암읍, 도척면"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "하남시의회",
+    "council_type": "기초의회",
+    "city_name": "하남시",
+    "election_district": "하남시가선거구(하남시)",
+    "election_area": "감북동, 감일동, 위례동, 춘궁동, 초이동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "하남시의회",
+    "council_type": "기초의회",
+    "city_name": "하남시",
+    "election_district": "하남시나선거구(하남시)",
+    "election_area": "천현동, 신장1동, 신장2동, 덕풍1동, 덕풍2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "하남시의회",
+    "council_type": "기초의회",
+    "city_name": "하남시",
+    "election_district": "하남시다선거구(하남시)",
+    "election_area": "미사1동, 미사2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "하남시의회",
+    "council_type": "기초의회",
+    "city_name": "하남시",
+    "election_district": "하남시라선거구(하남시)",
+    "election_area": "덕풍3동, 미사3동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "양주시의회",
+    "council_type": "기초의회",
+    "city_name": "양주시",
+    "election_district": "양주시가선거구(양주시)",
+    "election_area": "백석읍, 광적면, 장흥면, 양주1동, 양주2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "양주시의회",
+    "council_type": "기초의회",
+    "city_name": "양주시",
+    "election_district": "양주시나선거구(양주시)",
+    "election_area": "은현면, 남면, 회천2동, 회천3동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "양주시의회",
+    "council_type": "기초의회",
+    "city_name": "양주시",
+    "election_district": "양주시다선거구(양주시)",
+    "election_area": "회천1동, 옥정1동, 옥정2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "광명시의회",
+    "council_type": "기초의회",
+    "city_name": "광명시",
+    "election_district": "광명시가선거구(광명시)",
+    "election_area": "광명1동, 광명2동, 광명3동, 철산1동, 철산2동, 철산3동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "광명시의회",
+    "council_type": "기초의회",
+    "city_name": "광명시",
+    "election_district": "광명시나선거구(광명시)",
+    "election_area": "광명4동, 광명5동, 광명6동, 광명7동, 철산4동, 학온동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "광명시의회",
+    "council_type": "기초의회",
+    "city_name": "광명시",
+    "election_district": "광명시다선거구(광명시)",
+    "election_area": "하안1동, 하안2동, 하안3동, 하안4동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "광명시의회",
+    "council_type": "기초의회",
+    "city_name": "광명시",
+    "election_district": "광명시라선거구(광명시)",
+    "election_area": "소하1동, 소하2동, 일직동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "군포시의회",
+    "council_type": "기초의회",
+    "city_name": "군포시",
+    "election_district": "군포시가선거구(군포시)",
+    "election_area": "군포1동, 산본1동, 금정동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "군포시의회",
+    "council_type": "기초의회",
+    "city_name": "군포시",
+    "election_district": "군포시나선거구(군포시)",
+    "election_area": "군포2동, 대야동, 송부동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "군포시의회",
+    "council_type": "기초의회",
+    "city_name": "군포시",
+    "election_district": "군포시다선거구(군포시)",
+    "election_area": "산본2동, 궁내동, 광정동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "군포시의회",
+    "council_type": "기초의회",
+    "city_name": "군포시",
+    "election_district": "군포시라선거구(군포시)",
+    "election_area": "재궁동, 오금동, 수리동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "오산시의회",
+    "council_type": "기초의회",
+    "city_name": "오산시",
+    "election_district": "오산시가선거구(오산시)",
+    "election_area": "중앙동, 신장1동, 신장2동, 세마동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "오산시의회",
+    "council_type": "기초의회",
+    "city_name": "오산시",
+    "election_district": "오산시나선거구(오산시)",
+    "election_area": "대원1동, 대원2동, 남촌동, 초평동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "이천시의회",
+    "council_type": "기초의회",
+    "city_name": "이천시",
+    "election_district": "이천시가선거구(이천시)",
+    "election_area": "신둔면, 백사면, 증포동, 관고동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "이천시의회",
+    "council_type": "기초의회",
+    "city_name": "이천시",
+    "election_district": "이천시나선거구(이천시)",
+    "election_area": "마장면, 창전동, 중리동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "이천시의회",
+    "council_type": "기초의회",
+    "city_name": "이천시",
+    "election_district": "이천시다선거구(이천시)",
+    "election_area": "장호원읍, 부발읍, 호법면, 대월면, 모가면, 설성면, 율면"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안성시의회",
+    "council_type": "기초의회",
+    "city_name": "안성시",
+    "election_district": "안성시가선거구(안성시)",
+    "election_area": "공도읍, 양성면, 원곡면"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안성시의회",
+    "council_type": "기초의회",
+    "city_name": "안성시",
+    "election_district": "안성시나선거구(안성시)",
+    "election_area": "미양면, 대덕면, 고삼면, 안성3동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "안성시의회",
+    "council_type": "기초의회",
+    "city_name": "안성시",
+    "election_district": "안성시다선거구(안성시)",
+    "election_area": "보개면, 금광면, 서운면, 일죽면, 죽산면, 삼죽면, 안성1동, 안성2동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "구리시의회",
+    "council_type": "기초의회",
+    "city_name": "구리시",
+    "election_district": "구리시가선거구(구리시)",
+    "election_area": "갈매동, 동구동, 인창동, 교문1동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "구리시의회",
+    "council_type": "기초의회",
+    "city_name": "구리시",
+    "election_district": "구리시나선거구(구리시)",
+    "election_area": "교문2동, 수택1동, 수택2동, 수택3동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "포천시의회",
+    "council_type": "기초의회",
+    "city_name": "포천시",
+    "election_district": "포천시가선거구(포천시)",
+    "election_area": "군내면, 신북면, 창수면, 영중면, 영북면, 관인면, 포천동, 선단동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "포천시의회",
+    "council_type": "기초의회",
+    "city_name": "포천시",
+    "election_district": "포천시나선거구(포천시)",
+    "election_area": "소흘읍, 내촌면, 가산면, 일동면, 이동면, 화현면"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "의왕시의회",
+    "council_type": "기초의회",
+    "city_name": "의왕시",
+    "election_district": "의왕시가선거구(의왕시)",
+    "election_area": "고천동, 부곡동, 오전동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "의왕시의회",
+    "council_type": "기초의회",
+    "city_name": "의왕시",
+    "election_district": "의왕시나선거구(의왕시)",
+    "election_area": "내손1동, 내손2동, 청계동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "양평군의회",
+    "council_type": "기초의회",
+    "city_name": "양평군",
+    "election_district": "양평군가선거구(양평군)",
+    "election_area": "양평읍, 양서면, 옥천면, 서종면"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "양평군의회",
+    "council_type": "기초의회",
+    "city_name": "양평군",
+    "election_district": "양평군나선거구(양평군)",
+    "election_area": "강상면, 강하면, 단월면, 청운면, 양동면, 지평면, 용문면, 개군면"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "여주시의회",
+    "council_type": "기초의회",
+    "city_name": "여주시",
+    "election_district": "여주시가선거구(여주시)",
+    "election_area": "가남읍, 점동면, 세종대왕면, 북내면, 강천면, 여흥동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "여주시의회",
+    "council_type": "기초의회",
+    "city_name": "여주시",
+    "election_district": "여주시나선거구(여주시)",
+    "election_area": "흥천면, 금사면, 산북면, 대신면, 중앙동, 오학동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "동두천시의회",
+    "council_type": "기초의회",
+    "city_name": "동두천시",
+    "election_district": "동두천시가선거구(동두천시)",
+    "election_area": "생연2동, 송내동, 상패동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "동두천시의회",
+    "council_type": "기초의회",
+    "city_name": "동두천시",
+    "election_district": "동두천시나선거구(동두천시)",
+    "election_area": "생연1동, 중앙동, 보산동, 불현동, 소요동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "과천시의회",
+    "council_type": "기초의회",
+    "city_name": "과천시",
+    "election_district": "과천시가선거구(과천시)",
+    "election_area": "중앙동, 별양동, 과천동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "과천시의회",
+    "council_type": "기초의회",
+    "city_name": "과천시",
+    "election_district": "과천시나선거구(과천시)",
+    "election_area": "원문동, 갈현동, 부림동, 문원동"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "가평군의회",
+    "council_type": "기초의회",
+    "city_name": "가평군",
+    "election_district": "가평군가선거구(가평군)",
+    "election_area": "가평읍, 북면"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "가평군의회",
+    "council_type": "기초의회",
+    "city_name": "가평군",
+    "election_district": "가평군나선거구(가평군)",
+    "election_area": "설악면, 청평면"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "가평군의회",
+    "council_type": "기초의회",
+    "city_name": "가평군",
+    "election_district": "가평군다선거구(가평군)",
+    "election_area": "상면, 조종면"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "연천군의회",
+    "council_type": "기초의회",
+    "city_name": "연천군",
+    "election_district": "연천군가선거구(연천군)",
+    "election_area": "연천읍, 군남면, 미산면, 왕징면, 신서면, 중면"
+  },
+  {
+    "parent_council_id": "경기도의회",
+    "council_name": "연천군의회",
+    "council_type": "기초의회",
+    "city_name": "연천군",
+    "election_district": "연천군나선거구(연천군)",
+    "election_area": "전곡읍, 청산면, 백학면, 장남면"
+  }
+]

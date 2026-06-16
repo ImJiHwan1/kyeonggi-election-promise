@@ -1,0 +1,26 @@
+[
+  {
+    "tab_name": "gyeonggi-districts",
+    "content": "Gyeonggi 47 Districts"
+  },
+  {
+    "tab_name": "gyeonggi-do-members",
+    "content": "Gyeonggi Provincial Council Members"
+  },
+  {
+    "tab_name": "gyeonggi-si-members",
+    "content": "Gyeonggi City/County Council Members"
+  },
+  {
+    "tab_name": "incheon-districts",
+    "content": "Incheon 11 Districts"
+  },
+  {
+    "tab_name": "incheon-si-members",
+    "content": "Incheon Metropolitan Council Members"
+  },
+  {
+    "tab_name": "incheon-gu-members",
+    "content": "Incheon District/County Council Members"
+  }
+]

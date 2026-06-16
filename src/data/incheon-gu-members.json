@@ -1,0 +1,46 @@
+[
+  {
+    "election_district": "옹진군 가선거구(옹진군)",
+    "party_name": "더불어민주당",
+    "member": "김영진",
+    "member_image": "/data/incheon-gu/김영진.gif",
+    "pledge1": "제물포 북부역, 도화1구역 등 속도감 있는 원도심 재개발·재건축 추진",
+    "pledge2": "제일시장, 공단시장, 석바위시장 등 지역 맞춤형 재래시장 활성화 및 특화시장 조성",
+    "pledge3": "소상공인 및 자영업자 지원 (골목상점가 활성화, 소상공인 활성화센터 설립, 정책자금 확대)",
+    "pledge4": "지역상품권 및 인천e음 캐시백 확대"
+  },
+  {
+    "election_district": "옹진군 나선거구(옹진군)",
+    "party_name": "국민의힘",
+    "member": "박주광",
+    "member_image": "/data/incheon-gu/박주광.gif",
+    "pledge1": "복합 커뮤니티 신설",
+    "pledge2": "신재생 에너지 국민 연금 추진",
+    "pledge3": "영흥 에너지 테마파크 신설",
+    "pledge4": "790번 버스 노선 개편"
+  },
+  {
+    "election_district": "옹진군 다선거구(옹진군)",
+    "party_name": "더불어민주당",
+    "member": "이의명",
+    "member_image": "/data/incheon-gu/이의명.gif",
+    "pledge1": "소청도 LPG 저장소 이전",
+    "pledge2": "전기차 충전소 확충",
+    "pledge3": "방치 해군기지 이전",
+    "pledge4": "파크 골프장 건립"
+  },
+  {
+    "election_district": "비례대표",
+    "party_name": "국민의힘",
+    "member": "김승자",
+    "member_image": "/data/incheon-gu/김승자.gif",
+    "etc": "비례대표는 공약 없음"
+  },
+  {
+    "election_district": "비례대표",
+    "party_name": "더불어민주당",
+    "member": "조현정",
+    "member_image": "/data/incheon-gu/조현정.gif",
+    "etc": "비례대표는 공약 없음"
+  }
+]
