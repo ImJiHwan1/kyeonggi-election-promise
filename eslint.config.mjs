@@ -13,7 +13,7 @@ export default [
   // {
   //   ignores: ['**/dist'],
   // },
-  ...compat.extends('next/core-web-vitals', 'next/typescript', 'plugin:@tanstack/eslint-plugin-query/recommended'),
+  ...compat.extends('plugin:@tanstack/eslint-plugin-query/recommended'),
   {
     rules: {
       'no-var': 'error', // var 사용 금지

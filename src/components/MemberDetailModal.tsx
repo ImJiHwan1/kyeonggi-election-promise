@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { useCouncilMembers } from '../hooks/useDataQuery';
+import { useCouncilMembers, useElectionDistricts } from '../hooks/useDataQuery';
 import {
   Dialog,
   DialogContent,
@@ -22,6 +22,7 @@ import {
   TableRow,
 } from '@mui/material';
 import ScrollBarProvider from './ScrollBarProvider';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
 const MemberDetailModal: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -32,6 +33,7 @@ const MemberDetailModal: React.FC = () => {
   const isOpen = !!memberName && !!districtName && !!region;
 
   const { data: members, isLoading } = useCouncilMembers(region);
+  const { data: districtsData } = useElectionDistricts(region?.startsWith('gyeonggi') ? 'gyeonggi' : 'incheon');
 
   const member = members?.find(
     (m) => m.member === memberName && m.election_district === districtName
@@ -45,6 +47,14 @@ const MemberDetailModal: React.FC = () => {
     // For now let's just delete the ones that trigger the modal
     setSearchParams(newParams);
   };
+
+  const area = React.useMemo(() => {
+    if (!member || !districtsData) return null;
+    const district = districtsData.find(d =>
+      d.election_district.replace(/\s/g, '') === member.election_district.replace(/\s/g, '')
+    );
+    return district?.election_area;
+  }, [member, districtsData]);
 
   if (!isOpen) return null;
 
@@ -70,7 +80,7 @@ const MemberDetailModal: React.FC = () => {
       <DialogTitle sx={{ m: 0, p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Typography variant="h6" fontWeight="bold">의원 상세 정보</Typography>
         <IconButton onClick={handleClose}>
-          <CloseIcon />
+          <CloseOutlinedIcon />
         </IconButton>
       </DialogTitle>
       <DialogContent dividers>
@@ -106,11 +116,11 @@ const MemberDetailModal: React.FC = () => {
                 }}
               />
               <Box sx={{ flex: 1 }}>
-                <Typography variant="h4" component="h1" gutterBottom fontWeight="bold">
-                  {member.member} 의원
-                </Typography>
-                <Chip label={member.party_name} color="primary" sx={{ mb: 2 }} />
-
+                <div style={{ display: 'flex', alignItems: 'center',  gap: 8, marginBottom: 16, }}>
+                  <Chip label={member.party_name} color={member.party_name === '더불어민주당' ? "info": "error"} sx={{ fontSize: 16 }} />
+                  <span style={{ fontSize: 24, fontWeight: "bold" }}>{member.member} 의원</span>
+                  
+                </div>
                 <TableContainer component={Paper} variant="outlined">
                   <Table size="small">
                     <TableBody>
@@ -120,6 +130,14 @@ const MemberDetailModal: React.FC = () => {
                         </TableCell>
                         <TableCell>{member.election_district}</TableCell>
                       </TableRow>
+                      {area && (
+                        <TableRow>
+                          <TableCell variant="head" sx={{ backgroundColor: '#f5f5f5', fontWeight: 'bold' }}>
+                            포함 지역
+                          </TableCell>
+                          <TableCell>{area}</TableCell>
+                        </TableRow>
+                      )}
                       {member.etc && (
                         <TableRow>
                           <TableCell variant="head" sx={{ backgroundColor: '#f5f5f5', fontWeight: 'bold' }}>
@@ -188,12 +206,5 @@ const MemberDetailModal: React.FC = () => {
     </Dialog>
   );
 };
-
-const CloseIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="18" y1="6" x2="6" y2="18"></line>
-    <line x1="6" y1="6" x2="18" y2="18"></line>
-  </svg>
-);
 
 export default MemberDetailModal;

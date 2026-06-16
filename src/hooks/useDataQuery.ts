@@ -7,7 +7,7 @@ const fetchData = async <T>(fileName: string): Promise<T[]> => {
   // But for Vite, we can just import them if they are in src.
   // However, the requirement says to create a useQuery API form that views this JSON.
   // which usually means fetching the json.
-  const response = await fetch(`/src/data/${fileName}.json`);
+  const response = await fetch(`/data/${fileName}.json`);
   if (!response.ok) {
     throw new Error('Network response was not ok');
   }

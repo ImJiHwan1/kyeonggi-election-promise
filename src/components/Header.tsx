@@ -1,21 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Box,
-  InputBase,
-  Button,
-  Container,
-  Paper,
-  List,
-  ListItemText,
-  ListItemIcon,
-  ListItemButton,
-} from '@mui/material';
-import { styled, alpha } from '@mui/material/styles';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { useAllMembers } from '../hooks/useDataQuery';
+import React, { useEffect, useRef, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { AppBar, Box, Button, Container, InputBase, List, ListItemButton, ListItemText, Paper, Toolbar, Typography } from '@mui/material';
+import { alpha, styled } from '@mui/material/styles';
+import { useAllMembers, useElectionDistricts } from '../hooks/useDataQuery';
+import { useRecentSearches } from '../hooks/useRecentSearches';
+import ScrollBarProvider from './ScrollBarProvider';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -77,6 +66,18 @@ const Header: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
   const { data: allMembers } = useAllMembers();
+  const { data: gyeonggiDistricts } = useElectionDistricts('gyeonggi');
+  const { data: incheonDistricts } = useElectionDistricts('incheon');
+  const { recentSearches, addSearch, removeSearch, clearAll } = useRecentSearches();
+
+  const districts = [...(gyeonggiDistricts || []), ...(incheonDistricts || [])];
+  const districtAreaMap = React.useMemo(() => {
+    const map: Record<string, string> = {};
+    districts.forEach((d) => {
+      map[d.election_district.replace(/\s/g, '')] = d.election_area;
+    });
+    return map;
+  }, [districts]);
 
   const queryParams = new URLSearchParams(location.search);
   const currentRegion = queryParams.get('region');
@@ -92,26 +93,37 @@ const Header: React.FC = () => {
   }, []);
 
   const filteredMembers = searchQuery
-    ? allMembers?.filter(
-        (m) =>
-          m.member.includes(searchQuery) ||
-          m.election_district.includes(searchQuery) ||
-          m.category.includes(searchQuery)
-      ).slice(0, 10)
+    ? allMembers
+        ?.filter(
+          (m) =>
+            m.member.toLowerCase().replace(/\s/g, '').includes(searchQuery.toLowerCase().replace(/\s/g, '')) ||
+            m.election_district.toLowerCase().replace(/\s/g, '').includes(searchQuery.toLowerCase().replace(/\s/g, '')),
+        )
+        .slice(0, 10)
     : [];
 
   const handleNav = (region: string) => {
-    navigate(`/?region=${region}`);
+    navigate(`/detail?region=${region}`);
   };
 
   const handleMemberClick = (member: any) => {
-    const currentParams = new URLSearchParams(window.location.search);
+    addSearch(member.member);
+    const currentParams = new URLSearchParams();
     currentParams.set('member', member.member);
     currentParams.set('district', member.election_district);
     currentParams.set('region', member.categoryId);
-    navigate(`${window.location.pathname}?${currentParams.toString()}`);
+    navigate(`/detail?${currentParams.toString()}`);
     setIsSearchOpen(false);
     setSearchQuery('');
+  };
+
+  const handleSearch = () => {
+    if (searchQuery.trim()) {
+      addSearch(searchQuery.trim());
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      setIsSearchOpen(false);
+      setSearchQuery('');
+    }
   };
 
   return (
@@ -119,10 +131,7 @@ const Header: React.FC = () => {
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ height: '80px', justifyContent: 'space-between' }}>
           {/* Logo */}
-          <Box
-            sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
-            onClick={() => navigate('/')}
-          >
+          <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} onClick={() => navigate('/')}>
             <Box
               sx={{
                 backgroundColor: '#795548',
@@ -151,28 +160,16 @@ const Header: React.FC = () => {
 
           {/* Navigation */}
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <NavButton
-              className={currentRegion === 'gyeonggi-do' ? 'active' : ''}
-              onClick={() => handleNav('gyeonggi-do')}
-            >
+            <NavButton className={currentRegion === 'gyeonggi-do' ? 'active' : ''} onClick={() => handleNav('gyeonggi-do')}>
               경기도의원
             </NavButton>
-            <NavButton
-              className={currentRegion === 'incheon-si' ? 'active' : ''}
-              onClick={() => handleNav('incheon-si')}
-            >
+            <NavButton className={currentRegion === 'incheon-si' ? 'active' : ''} onClick={() => handleNav('incheon-si')}>
               인천광역시의원
             </NavButton>
-            <NavButton
-              className={currentRegion === 'gyeonggi-si' ? 'active' : ''}
-              onClick={() => handleNav('gyeonggi-si')}
-            >
+            <NavButton className={currentRegion === 'gyeonggi-si' ? 'active' : ''} onClick={() => handleNav('gyeonggi-si')}>
               경기도 시·군의원
             </NavButton>
-            <NavButton
-              className={currentRegion === 'incheon-gu' ? 'active' : ''}
-              onClick={() => handleNav('incheon-gu')}
-            >
+            <NavButton className={currentRegion === 'incheon-gu' ? 'active' : ''} onClick={() => handleNav('incheon-gu')}>
               인천광역시 구·군의원
             </NavButton>
           </Box>
@@ -191,9 +188,15 @@ const Header: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onFocus={() => setIsSearchOpen(true)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    handleSearch();
+                  }
+                }}
               />
               <Button
                 variant="contained"
+                onClick={handleSearch}
                 sx={{
                   backgroundColor: '#002884',
                   borderRadius: '0 20px 20px 0',
@@ -207,7 +210,7 @@ const Header: React.FC = () => {
             </Search>
 
             {/* Search Results Dropdown */}
-            {isSearchOpen && (searchQuery || (filteredMembers && filteredMembers.length > 0)) && (
+            {isSearchOpen && (
               <Paper
                 sx={{
                   position: 'absolute',
@@ -217,42 +220,97 @@ const Header: React.FC = () => {
                   zIndex: 1000,
                   boxShadow: 3,
                   maxHeight: '500px',
-                  overflowY: 'auto',
                 }}
               >
-                <Box sx={{ p: 2 }}>
-                  <Typography variant="subtitle2" color="text.secondary" gutterBottom>
-                    검색 결과
-                  </Typography>
-                  <List dense>
-                    {filteredMembers?.map((member, index) => (
-                      <ListItemButton
-                        key={index}
-                        onClick={() => handleMemberClick(member)}
-                        sx={{ borderRadius: 1, mb: 0.5 }}
-                      >
-                        <ListItemIcon sx={{ minWidth: 36 }}>
-                          <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                          </svg>
-                        </ListItemIcon>
-                        <ListItemText
-                          primary={`${member.election_district} - ${member.member}`}
-                          secondary={member.category}
-                        />
-                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                      </ListItemButton>
-                    ))}
-                    {filteredMembers?.length === 0 && searchQuery && (
-                      <Typography sx={{ p: 2, textAlign: 'center' }} color="text.secondary">
-                        검색 결과가 없습니다.
-                      </Typography>
+                <ScrollBarProvider style={{ maxHeight: '500px' }} noScrollX={true}>
+                  <Box sx={{ p: 2 }}>
+                    {recentSearches.length > 0 && !searchQuery && (
+                      <Box sx={{ mb: 2 }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+                          <Typography variant="subtitle2" fontWeight="bold">
+                            최근 검색어
+                          </Typography>
+                          <Button size="small" onClick={clearAll} sx={{ color: '#888' }}>
+                            전체 삭제
+                          </Button>
+                        </Box>
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                          {recentSearches.map((term) => (
+                            <Box
+                              key={term}
+                              onClick={() => {
+                                setSearchQuery(term);
+                                addSearch(term);
+                                navigate(`/search?q=${encodeURIComponent(term)}`);
+                                setIsSearchOpen(false);
+                              }}
+                              sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                backgroundColor: '#f0f0f0',
+                                borderRadius: '4px',
+                                px: 1,
+                                py: 0.5,
+                                cursor: 'pointer',
+                                fontSize: '12px',
+                              }}
+                            >
+                              {term}
+                              <Box
+                                component="span"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  removeSearch(term);
+                                }}
+                                sx={{ ml: 1, color: '#888' }}
+                              >
+                                ✕
+                              </Box>
+                            </Box>
+                          ))}
+                        </Box>
+                      </Box>
                     )}
-                  </List>
-                </Box>
+
+                    {searchQuery && (
+                      <>
+                        <Typography variant="subtitle2" color="text.secondary" gutterBottom fontWeight="bold">
+                          검색 결과
+                        </Typography>
+                        <List dense>
+                          {filteredMembers?.map((member, index) => {
+                            const area = districtAreaMap[member.election_district.replace(/\s/g, '')];
+                            return (
+                              <ListItemButton key={index} onClick={() => handleMemberClick(member)} sx={{ borderRadius: 1, mb: 0.5 }}>
+                                <ListItemText
+                                  primary={
+                                    <Box component="span" sx={{ fontWeight: 'bold' }}>
+                                      {member.election_district}{' '}
+                                      {area && (
+                                        <Box component="span" sx={{ fontWeight: 'normal', color: 'text.secondary' }}>
+                                          ({area})
+                                        </Box>
+                                      )}
+                                    </Box>
+                                  }
+                                  secondary={member.member}
+                                />
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                              </ListItemButton>
+                            );
+                          })}
+                          {filteredMembers?.length === 0 && (
+                            <Typography sx={{ p: 2, textAlign: 'center' }} color="text.secondary">
+                              검색 결과가 없습니다.
+                            </Typography>
+                          )}
+                        </List>
+                      </>
+                    )}
+                  </Box>
+                </ScrollBarProvider>
               </Paper>
             )}
           </Box>

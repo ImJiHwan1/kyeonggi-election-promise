@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import MainPage from './pages/MainPage';
+import DetailPage from './pages/DetailPage';
+import SearchPage from './pages/SearchPage';
 import Layout from './components/Layout';
 import MemberDetailModal from './components/MemberDetailModal';
 
@@ -50,7 +52,8 @@ function App() {
           <Layout>
             <Routes>
               <Route path="/" element={<MainPage />} />
-              <Route path="/detail" element={<MainPage />} />
+              <Route path="/detail" element={<DetailPage />} />
+              <Route path="/search" element={<SearchPage />} />
             </Routes>
             <MemberDetailModal />
           </Layout>

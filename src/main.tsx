@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 
 // Global styles
-import '../public/css/style.css';
-import '../public/css/contents.css';
-import '../public/css/layout.css';
+import './styles/style.css';
+import './styles/contents.css';
+import './styles/layout.css';
+import './styles/layout_01.css';
 
 // Common component styles
 // import '@components/common/CustomScrollbar/styles.css';
