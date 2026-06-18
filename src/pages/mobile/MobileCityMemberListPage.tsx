@@ -100,13 +100,17 @@ const MobileCityMemberListPage = () => {
               <span className={cn({ party_blue: member.party_name === '더불어민주당', party_red: member.party_name === '국민의힘' })}>
                 {member.party_name}
               </span>
-              <Link
-                to={`/member/${member.member}/pledges?region=${region}&electionArea=${selectedDistrict?.election_area}`}
-                className="pledge_btn"
-              >
-                공약사항 보기
-                <em>›</em>
-              </Link>
+              {member.etc ? (
+                <p style={{ marginTop: 28 }}>{member.etc}</p>
+              ) : (
+                <Link
+                  to={`/member/${member.member}/pledges?region=${region}&electionArea=${selectedDistrict?.election_area}`}
+                  className="pledge_btn"
+                >
+                  공약사항 보기
+                  <em>›</em>
+                </Link>
+              )}
             </div>
           </div>
         ))}

@@ -1,14 +1,10 @@
 import React from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SearchBox from '@components/SearchBox.tsx';
 import '@styles/layout.css';
 import { tabs } from '@/consts';
 
 const MobileMainPage: React.FC = () => {
-  const [searchParams] = useSearchParams();
-
-  const region = searchParams.get('region') || 'gyeonggi-do';
-
   return (
     <div className="content_container">
       {/* 검색인풋 */}
@@ -26,12 +22,12 @@ const MobileMainPage: React.FC = () => {
 
       <div className="pledges_wrap">
         <div className="search-box">
-          <SearchBox initialValue="" region={region} type="mobile" />
+          <SearchBox type="mobile" />
         </div>
         <div className="pledge-list">
           {tabs.map((item) => (
             <Link key={item.id} to={`/detail?region=${item.id}`} className="pledge-item">
-              <div className="icon">🏛</div>
+              <img src={`/images/etc/${item.id.split('-')[0]}_logo.svg`} alt="지역구 이미지" style={{ width: 52, height: 52 }} />
               <div className="txt">
                 <strong>{item.label} 공약</strong>
                 <span>바로가기 &gt;</span>
