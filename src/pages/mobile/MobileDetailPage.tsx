@@ -56,7 +56,7 @@ const MobileDetailPage = () => {
           </p>
 
           <div className="region_map">
-            <img src={getMapImg()} alt={`${currentTab.label} 지도`} />
+            <img src={getMapImg()} alt={`${currentTab.label} 지도`} style={{ height: 410 }} />
           </div>
 
           <div className="region_list">

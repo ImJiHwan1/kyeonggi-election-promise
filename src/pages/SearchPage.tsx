@@ -59,9 +59,9 @@ const SearchPage: React.FC = () => {
 
         <div className="location_pledge_cotainer">
           <div className="pledge_loc_title">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '2px', cursor: 'pointer' }} onClick={() => navigate(-1)}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '2px', cursor: 'pointer' }} onClick={() => navigate('/')}>
               <ArrowBackOutlinedIcon />
-              <span>뒤로 가기</span>
+              <span>홈으로 돌아가기</span>
             </div>
             <p>
               "{query}" 검색 결과 ({filteredMembers.length}건)

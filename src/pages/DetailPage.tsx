@@ -164,7 +164,7 @@ const DetailPage: React.FC = () => {
 
                   <div className="pledge_detail_contents">
                     <div className="location_map">
-                      <img src={getMapImg()} alt="지역 맵" loading="lazy" style={{ width: 500 }} />
+                      <img src={getMapImg()} alt="지역 맵" loading="lazy" style={{ width: 500, height: 510 }} />
                     </div>
 
                     <div className="location_select">
