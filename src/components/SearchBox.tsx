@@ -6,9 +6,10 @@ import { useRecentSearches } from '../hooks/useRecentSearches';
 interface SearchBoxProps {
   initialValue?: string;
   region?: string;
+  type?: 'mobile' | undefined;
 }
 
-const SearchBox: React.FC<SearchBoxProps> = ({ initialValue = '', region = 'gyeonggi-do' }) => {
+const SearchBox: React.FC<SearchBoxProps> = ({ initialValue = '', region = 'gyeonggi-do', type }) => {
   const navigate = useNavigate();
   const [searchValue, setSearchValue] = useState(initialValue);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -65,8 +66,17 @@ const SearchBox: React.FC<SearchBoxProps> = ({ initialValue = '', region = 'gyeo
   }, [searchValue, allMembers]);
 
   return (
-    <div className={`dash_input_box ${isDropdownOpen ? 'active' : ''}`} ref={dropdownRef}>
-      <img src="/images/ico/search_ico.png" alt="검색아이콘" />
+    <div
+      className={`dash_input_box ${isDropdownOpen ? 'active' : ''}`}
+      ref={dropdownRef}
+      style={type === 'mobile' ? { margin: 0, width: '100%' } : {}}
+    >
+      <img
+        src="/images/ico/search_ico.png"
+        alt="검색아이콘"
+        style={type === 'mobile' ? { position: 'absolute', left: 'auto', right: 10, top: 6 } : {}}
+        onClick={() => handleSearch(searchValue)}
+      />
       <input
         type="text"
         className="form-control right_input"
@@ -74,15 +84,18 @@ const SearchBox: React.FC<SearchBoxProps> = ({ initialValue = '', region = 'gyeo
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
         onFocus={() => setIsDropdownOpen(true)}
+        // onBlur={() => setIsDropdownOpen(false)}
         onKeyDown={(e) => {
           if (e.key === 'Enter') {
             handleSearch(searchValue);
           }
         }}
       />
-      <button type="button" className="btn_dash_search" onClick={() => handleSearch(searchValue)}>
-        검색
-      </button>
+      {!type && (
+        <button type="button" className="btn_dash_search" onClick={() => handleSearch(searchValue)}>
+          검색
+        </button>
+      )}
 
       {/* 검색 드롭다운 */}
       {isDropdownOpen && (
@@ -134,12 +147,17 @@ const SearchBox: React.FC<SearchBoxProps> = ({ initialValue = '', region = 'gyeo
                       key={`${member.member}-${member.election_district}-${idx}`}
                       className="result_item"
                       onClick={() => {
+                        if (type === 'mobile') {
+                          console.log('mobile');
+                          navigate(`/member/${member.member}/pledges?region=${(member as any).categoryId || ''}`);
+                        } else {
+                          const params = new URLSearchParams();
+                          params.set('member', member.member);
+                          params.set('district', member.election_district);
+                          params.set('region', (member as any).categoryId || region);
+                          navigate(`/detail?${params.toString()}`);
+                        }
                         addSearch(member.member);
-                        const params = new URLSearchParams();
-                        params.set('member', member.member);
-                        params.set('district', member.election_district);
-                        params.set('region', (member as any).categoryId || region);
-                        navigate(`/detail?${params.toString()}`);
                         setIsDropdownOpen(false);
                       }}
                       style={{ cursor: 'pointer' }}

@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import MemberDetailModal from '@components/MemberDetailModal.tsx';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Box, CircularProgress } from '@mui/material';
 import { AnimatePresence, motion } from 'framer-motion';
-import ScrollBarProvider from '../components/ScrollBarProvider';
+import { tabs } from '@/consts';
 import SearchBox from '../components/SearchBox';
 import { useCouncilMembers, useElectionDistricts } from '../hooks/useDataQuery';
 
@@ -95,13 +96,6 @@ const DetailPage: React.FC = () => {
     setSelectedCity('전체');
   };
 
-  const tabs = [
-    { id: 'gyeonggi-do', label: '경기도의원', key: 'ky01' },
-    { id: 'incheon-si', label: '인천광역시의원', key: 'ic01' },
-    { id: 'gyeonggi-si', label: '경기도 시군의원', key: 'ky02' },
-    { id: 'incheon-gu', label: '인천광역시 구군의원', key: 'ic02' },
-  ];
-
   const currentTab = tabs.find((t) => t.id === region) || tabs[0];
 
   useEffect(() => {
@@ -119,117 +113,120 @@ const DetailPage: React.FC = () => {
   };
 
   return (
-    <div className="wrapper pledge_contents">
-      {/* 헤더 */}
-      <div className="pledge_head_container">
-        <img src="/images/etc/h_left_logo.png" alt="공약추적단 이미지" />
-        <a href="https://www.kyeonggi.com/">
-          <img src="/images/etc/h_right_logo.png" alt="경기일보로고" />
-        </a>
-      </div>
-      {/* //헤더 */}
-
-      {/* 콘텐츠 */}
-      <div className="pledge_contents_container">
-        {/* 탭메뉴 */}
-        <div className="pledge_location_tab">
-          <ul className="nav nav-tabs" id="myTab" role="tablist">
-            {tabs.map((tab) => (
-              <li className="nav-item" key={tab.id}>
-                <a
-                  className={`nav-link ${region === tab.id ? 'active' : ''}`}
-                  onClick={() => handleRegionTab(tab.id)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {tab.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          {/* 검색창 */}
-          <SearchBox initialValue={search || ''} region={region} />
+    <>
+      <div className="wrapper pledge_contents">
+        {/* 헤더 */}
+        <div className="pledge_head_container">
+          <img src="/images/etc/h_left_logo.png" alt="공약추적단 이미지" />
+          <a href="https://www.kyeonggi.com/">
+            <img src="/images/etc/h_right_logo.png" alt="경기일보로고" />
+          </a>
         </div>
+        {/* //헤더 */}
 
-        <div className="pledge_detail_container">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={region}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.3 }}
-              className="tab-content"
-            >
-              <div className="tab-pane fade show active">
-                <div className="detail_page_title">
-                  <h1>{currentTab.label} 공약</h1>
-                  <p>{currentTab.label}들의 공약을 지역별로 확인해보세요.</p>
-                </div>
+        {/* 콘텐츠 */}
+        <div className="pledge_contents_container">
+          {/* 탭메뉴 */}
+          <div className="pledge_location_tab">
+            <ul className="nav nav-tabs" id="myTab" role="tablist">
+              {tabs.map((tab) => (
+                <li className="nav-item" key={tab.id}>
+                  <a
+                    className={`nav-link ${region === tab.id ? 'active' : ''}`}
+                    onClick={() => handleRegionTab(tab.id)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    {tab.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
 
-                <div className="pledge_detail_contents">
-                  <div className="location_map">
-                    <img src={getMapImg()} alt="지역 맵" loading="lazy" style={{ width: 500 }} />
+            {/* 검색창 */}
+            <SearchBox initialValue={search || ''} region={region} />
+          </div>
+
+          <div className="pledge_detail_container">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={region}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.3 }}
+                className="tab-content"
+              >
+                <div className="tab-pane fade show active">
+                  <div className="detail_page_title">
+                    <h1>{currentTab.label} 공약</h1>
+                    <p>{currentTab.label}들의 공약을 지역별로 확인해보세요.</p>
                   </div>
 
-                  <div className="location_select">
-                    <div className="location_select_title">
-                      <p>{currentTab.label}들의 공약을</p>
-                      <p>지역별로 확인해 보세요.</p>
-                      <p>시군을 클릭하시면 해당 지역 의원의 공약을 보실 수 있습니다.</p>
+                  <div className="pledge_detail_contents">
+                    <div className="location_map">
+                      <img src={getMapImg()} alt="지역 맵" loading="lazy" style={{ width: 500 }} />
                     </div>
 
-                    <div className="location_btn_container" style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '7px' }}>
-                      <button
-                        type="button"
-                        className={`btn btn_location ${!selectedCity || selectedCity === '전체' ? 'active' : ''}`}
-                        onClick={() => setSelectedCity('전체')}
-                        style={{ width: '100%', margin: 0 }}
+                    <div className="location_select">
+                      <div className="location_select_title">
+                        <p>{currentTab.label}들의 공약을</p>
+                        <p>지역별로 확인해 보세요.</p>
+                        <p>시군을 클릭하시면 해당 지역 의원의 공약을 보실 수 있습니다.</p>
+                      </div>
+
+                      <div
+                        className="location_btn_container"
+                        style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '7px' }}
                       >
-                        전체
-                      </button>
-                      {cities.map((city) => (
                         <button
-                          key={city}
                           type="button"
-                          className={`btn btn_location ${selectedCity === city ? 'active' : ''}`}
-                          onClick={() => setSelectedCity(city)}
-                          style={{ margin: 0 }}
+                          className={`btn btn_location ${!selectedCity || selectedCity === '전체' ? 'active' : ''}`}
+                          onClick={() => setSelectedCity('전체')}
+                          style={{ width: '100%', margin: 0 }}
                         >
-                          {city}
+                          전체
                         </button>
-                      ))}
-                      <button
-                        type="button"
-                        className={`btn btn_location ${selectedCity === '비례대표' ? 'active' : ''}`}
-                        onClick={() => setSelectedCity('비례대표')}
-                        style={{ width: '100%', margin: 0 }}
-                      >
-                        비례대표
-                      </button>
+                        {cities.map((city) => (
+                          <button
+                            key={city}
+                            type="button"
+                            className={`btn btn_location ${selectedCity === city ? 'active' : ''}`}
+                            onClick={() => setSelectedCity(city)}
+                            style={{ margin: 0 }}
+                          >
+                            {city}
+                          </button>
+                        ))}
+                        <button
+                          type="button"
+                          className={`btn btn_location ${selectedCity === '비례대표' ? 'active' : ''}`}
+                          onClick={() => setSelectedCity('비례대표')}
+                          style={{ width: '100%', margin: 0 }}
+                        >
+                          비례대표
+                        </button>
+                      </div>
                     </div>
                   </div>
+
+                  <div className="location_pledge_line"></div>
                 </div>
+              </motion.div>
+            </AnimatePresence>
 
-                <div className="location_pledge_line"></div>
+            {/* 의원 리스트 영역 */}
+            <div className="location_pledge_cotainer" style={{ marginTop: '40px' }}>
+              <div className="pledge_loc_title">
+                <p>{selectedCity === '전체' ? currentTab.label : selectedCity}</p>
               </div>
-            </motion.div>
-          </AnimatePresence>
 
-          {/* 의원 리스트 영역 */}
-          <div className="location_pledge_cotainer" style={{ marginTop: '40px' }}>
-            <div className="pledge_loc_title">
-              <p>{selectedCity === '전체' ? currentTab.label : selectedCity}</p>
-            </div>
+              {selectedCity !== '전체' && districts.length > 0 && (
+                <div className="district_tab_wrapper" style={{ marginTop: '20px' }}>
+                  <button type="button" className="btn_tab_arrow prev" onClick={() => handleScroll('left')}>
+                    <ChevronLeftIcon />
+                  </button>
 
-            {selectedCity !== '전체' && districts.length > 0 && (
-              <div className="district_tab_wrapper" style={{ marginTop: '20px' }}>
-                <button type="button" className="btn_tab_arrow prev" onClick={() => handleScroll('left')}>
-                  <ChevronLeftIcon />
-                </button>
-
-                <div className="district_tab_scroll" ref={scrollRef}>
-                  <ScrollBarProvider noScrollY={true} noScrollX={false} style={{ width: '100%', height: 'auto' }}>
+                  <div className="district_tab_scroll" ref={scrollRef}>
                     <ul className="district_tab_list">
                       <li>
                         <button
@@ -260,89 +257,90 @@ const DetailPage: React.FC = () => {
                         );
                       })}
                     </ul>
-                  </ScrollBarProvider>
+                  </div>
+
+                  <button type="button" className="btn_tab_arrow next" onClick={() => handleScroll('right')}>
+                    <ChevronRightIcon />
+                  </button>
                 </div>
+              )}
 
-                <button type="button" className="btn_tab_arrow next" onClick={() => handleScroll('right')}>
-                  <ChevronRightIcon />
-                </button>
-              </div>
-            )}
-
-            {membersLoading ? (
-              <Box sx={{ display: 'flex', justifyContent: 'center', py: 10 }}>
-                <CircularProgress />
-              </Box>
-            ) : membersError || districtsError ? (
-              <div style={{ width: '100%', textAlign: 'center', padding: '50px', color: 'red' }}>
-                데이터를 불러오는 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.
-              </div>
-            ) : (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="lawmaker_list_container active"
-              >
-                <div className="lawmaker_card_flex" style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
-                  <AnimatePresence mode="popLayout">
-                    {filteredMembers.map((member, idx) => (
-                      <motion.div
-                        layout
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.9 }}
-                        transition={{ duration: 0.2 }}
-                        className="lawmaker_card"
-                        key={`${member.member}-${member.election_district}-${idx}`}
-                        style={{ width: 'calc(25% - 15px)', minWidth: '255px', flex: '0 0 calc(25% - 15px)' }}
-                      >
-                        <div className="card_location">
-                          <p>{member.election_district}</p>
-                          {districtAreaMap[member.election_district.replace(/\s/g, '')] && (
-                            <span style={{ fontSize: '0.8rem', color: '#777', display: 'block', marginTop: '4px' }}>
-                              ({districtAreaMap[member.election_district.replace(/\s/g, '')]})
-                            </span>
-                          )}
-                        </div>
-                        <div className="media lawmaker_profile">
-                          <div className="profile_thumb">
-                            <img src={member.member_image || '/images/etc/lawmaker_img_01.jpg'} alt={member.member} />
+              {membersLoading ? (
+                <Box sx={{ display: 'flex', justifyContent: 'center', py: 10 }}>
+                  <CircularProgress />
+                </Box>
+              ) : membersError || districtsError ? (
+                <div style={{ width: '100%', textAlign: 'center', padding: '50px', color: 'red' }}>
+                  데이터를 불러오는 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.
+                </div>
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="lawmaker_list_container active"
+                >
+                  <div className="lawmaker_card_flex" style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+                    <AnimatePresence mode="popLayout">
+                      {filteredMembers.map((member, idx) => (
+                        <motion.div
+                          layout
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0.9 }}
+                          transition={{ duration: 0.2 }}
+                          className="lawmaker_card"
+                          key={`${member.member}-${member.election_district}-${idx}`}
+                          style={{ width: 'calc(25% - 15px)', minWidth: '255px', flex: '0 0 calc(25% - 15px)' }}
+                        >
+                          <div className="card_location">
+                            <p>{member.election_district}</p>
+                            {districtAreaMap[member.election_district.replace(/\s/g, '')] && (
+                              <span style={{ fontSize: '0.8rem', color: '#777', display: 'block', marginTop: '4px' }}>
+                                ({districtAreaMap[member.election_district.replace(/\s/g, '')]})
+                              </span>
+                            )}
                           </div>
-                          <div className="profile_txt">
-                            <div className="profile_con">
-                              <p className="p_name">{member.member} 의원</p>
-                              <span className="p_span">{member.party_name}</span>
+                          <div className="media lawmaker_profile">
+                            <div className="profile_thumb">
+                              <img src={member.member_image || '/images/etc/lawmaker_img_01.jpg'} alt={member.member} />
                             </div>
-                            <button
-                              type="button"
-                              className="btn btn_w_view"
-                              onClick={() => {
-                                const params = new URLSearchParams();
-                                params.set('member', member.member);
-                                params.set('district', member.election_district);
-                                params.set('region', region);
-                                navigate(`${window.location.pathname}?${params.toString()}`, { replace: true });
-                              }}
-                            >
-                              공약사항
-                              <ArrowForwardIosOutlinedIcon style={{ fontSize: 16 }} />
-                            </button>
+                            <div className="profile_txt">
+                              <div className="profile_con">
+                                <p className="p_name">{member.member} 의원</p>
+                                <span className="p_span">{member.party_name}</span>
+                              </div>
+                              <button
+                                type="button"
+                                className="btn btn_w_view"
+                                onClick={() => {
+                                  const params = new URLSearchParams();
+                                  params.set('member', member.member);
+                                  params.set('district', member.election_district);
+                                  params.set('region', region);
+                                  navigate(`${window.location.pathname}?${params.toString()}`, { replace: true });
+                                }}
+                              >
+                                공약사항
+                                <ArrowForwardIosOutlinedIcon style={{ fontSize: 16 }} />
+                              </button>
+                            </div>
                           </div>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </AnimatePresence>
-                  {filteredMembers.length === 0 && (
-                    <div style={{ width: '100%', textAlign: 'center', padding: '50px' }}>검색 결과가 없습니다.</div>
-                  )}
-                </div>
-              </motion.div>
-            )}
+                        </motion.div>
+                      ))}
+                    </AnimatePresence>
+                    {filteredMembers.length === 0 && (
+                      <div style={{ width: '100%', textAlign: 'center', padding: '50px' }}>검색 결과가 없습니다.</div>
+                    )}
+                  </div>
+                </motion.div>
+              )}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <MemberDetailModal />
+    </>
   );
 };
 

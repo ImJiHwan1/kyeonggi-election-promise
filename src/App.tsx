@@ -1,11 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { isMobile, isTablet } from 'react-device-detect';
+import { Route, Routes, useSearchParams } from 'react-router-dom';
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
-import MainPage from './pages/MainPage';
-import DetailPage from './pages/DetailPage';
-import SearchPage from './pages/SearchPage';
+import MobileCityMemberListPage from '@pages/mobile/MobileCityMemberListPage.tsx';
+import MobileDetailPage from '@pages/mobile/MobileDetailPage.tsx';
+import MobileMainPage from '@pages/mobile/MobileMainPage.tsx';
+import MobileMemberPledgePage from '@pages/mobile/MobileMemberPledgePage.tsx';
+import MobileSearchPage from '@pages/mobile/MobileSearchPage.tsx';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Layout from './components/Layout';
-import MemberDetailModal from './components/MemberDetailModal';
+import DetailPage from './pages/DetailPage';
+import MainPage from './pages/MainPage';
+import SearchPage from './pages/SearchPage';
 
 const queryClient = new QueryClient();
 const theme = createTheme({
@@ -17,7 +22,7 @@ const theme = createTheme({
       main: '#1976d2',
     },
     background: {
-      default: '#f8f9fa',
+      default: '#fff',
     },
   },
   typography: {
@@ -44,20 +49,30 @@ const theme = createTheme({
 });
 
 function App() {
+  const [searchParams] = useSearchParams();
+  const deviceType = searchParams.get('deviceType');
+
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Router>
+        {deviceType === 'mobile' || isMobile || isTablet ? (
+          <Routes>
+            <Route path="/" element={<MobileMainPage />} />
+            <Route path="/detail" element={<MobileDetailPage />} />
+            <Route path="/city/member/:cityName" element={<MobileCityMemberListPage />} />
+            <Route path="/member/:memberId/pledges" element={<MobileMemberPledgePage />} />
+            <Route path="/search" element={<MobileSearchPage />} />
+          </Routes>
+        ) : (
           <Layout>
             <Routes>
               <Route path="/" element={<MainPage />} />
               <Route path="/detail" element={<DetailPage />} />
               <Route path="/search" element={<SearchPage />} />
             </Routes>
-            <MemberDetailModal />
           </Layout>
-        </Router>
+        )}
       </ThemeProvider>
     </QueryClientProvider>
   );

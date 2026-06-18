@@ -8,3 +8,4 @@ dist
 .pnp.*
 .DS_Store
 .idea/
+료node_modules
