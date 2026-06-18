@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SearchBox from '../components/SearchBox';
 
 // Landing View Component
@@ -10,9 +10,9 @@ const LandingView: React.FC = () => {
       {/* 헤더 */}
       <div className="pledge_head_container">
         <img src="/images/etc/h_left_logo.png" alt="공약추적단 이미지" />
-        <a href="https://www.kyeonggi.com/">
+        <Link to="https://www.kyeonggi.com/" target="_blank">
           <img src="/images/etc/h_right_logo.png" alt="경기일보로고" />
-        </a>
+        </Link>
       </div>
       {/* //헤더 */}
       {/* 콘텐츠 */}
@@ -64,7 +64,8 @@ const LandingView: React.FC = () => {
             {/* //타이틀 */}
             {/* 내용 */}
             <p>
-              경기도의회 의원들의<br />
+              경기도의회 의원들의
+              <br />
               공약을 확인하세요.
             </p>
             {/* //내용 */}
@@ -89,7 +90,8 @@ const LandingView: React.FC = () => {
             {/* //타이틀 */}
             {/* 내용 */}
             <p>
-              인천광역시의회 의원들의<br />
+              인천광역시의회 의원들의
+              <br />
               공약을 확인하세요.
             </p>
             {/* //내용 */}
@@ -114,7 +116,8 @@ const LandingView: React.FC = () => {
             {/* //타이틀 */}
             {/* 내용 */}
             <p>
-              경기도 31개 시·군의회 의원들의<br />
+              경기도 31개 시·군의회 의원들의
+              <br />
               공약을 확인하세요.
             </p>
             {/* //내용 */}
@@ -139,7 +142,8 @@ const LandingView: React.FC = () => {
             {/* //타이틀 */}
             {/* 내용 */}
             <p>
-              인천광역시 11개 구·군 의원들의<br />
+              인천광역시 11개 구·군 의원들의
+              <br />
               공약을 확인하세요.
             </p>
             {/* //내용 */}

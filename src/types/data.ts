@@ -13,6 +13,7 @@ export interface CouncilMember {
   member: string;
   member_image: string;
   etc?: string;
+  categoryId: string;
   [key: string]: string | undefined; // For pledges (pledge1, pledge2, etc.)
 }
 

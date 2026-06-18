@@ -100,13 +100,13 @@
     "party_name": "국민의힘",
     "member": "이지혜",
     "member_image": "/data/gyeonggi-do/이지혜.jpg",
-    "etc": "비례대표는 공약 없음"
+    "etc": "비례대표는 공약이 없습니다."
   },
   {
     "election_district": "비례대표",
     "party_name": "더불어민주당",
     "member": "서인하",
     "member_image": "/data/gyeonggi-do/서인하.jpg",
-    "etc": "비례대표는 공약 없음"
+    "etc": "비례대표는 공약이 없습니다."
   }
 ]

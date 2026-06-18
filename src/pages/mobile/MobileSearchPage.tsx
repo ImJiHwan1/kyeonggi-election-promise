@@ -30,34 +30,6 @@ const MobileSearchPage = () => {
       <h2 className="region_title">
         "{query}" 검색 결과 ({filteredMembers.length}건)
       </h2>
-
-      {/*<div className="district_list">*/}
-      {/*  {cityDistricts.map((district) => (*/}
-      {/*    <a*/}
-      {/*      style={{ whiteSpace: 'pre-wrap' }}*/}
-      {/*      key={district.election_district}*/}
-      {/*      href="#"*/}
-      {/*      className={cn('district_btn', { active: selectedDistrict?.election_district === district.election_district })}*/}
-      {/*      onClick={(e) => {*/}
-      {/*        e.preventDefault();*/}
-      {/*        setSelectedDistrict(district);*/}
-      {/*      }}*/}
-      {/*    >*/}
-      {/*      {district.election_district.replace('(', ' \n(')}*/}
-      {/*    </a>*/}
-      {/*  ))}*/}
-      {/*</div>*/}
-
-      {/*{selectedDistrict && (*/}
-      {/*  <div className="district_info">*/}
-      {/*    <h3 className="district_name">*/}
-      {/*      {selectedDistrict.election_district} <span>{selectedDistrict.city_name ? `(${selectedDistrict.city_name})` : ''}</span>*/}
-      {/*    </h3>*/}
-      {/*    <p className="district_area">{selectedDistrict.council_name}</p>*/}
-      {/*    <p className="district_count">정수 : {filteredMembers.length}명</p>*/}
-      {/*  </div>*/}
-      {/*)}*/}
-
       <div className="member_list">
         {filteredMembers.map((member: CouncilMember) => (
           <div key={member.member} className="member_card">
@@ -69,10 +41,14 @@ const MobileSearchPage = () => {
               <span className={cn({ party_blue: member.party_name === '더불어민주당', party_red: member.party_name === '국민의힘' })}>
                 {member.party_name}
               </span>
-              <Link to={`/member/${member.member}/pledges`} className="pledge_btn">
-                공약사항 보기
-                <em>›</em>
-              </Link>
+              {member.etc ? (
+                <p style={{ marginTop: 28 }}>{member.etc}</p>
+              ) : (
+                <Link to={`/member/${member.member}/pledges?region=${member.categoryId}`} className="pledge_btn">
+                  공약사항 보기
+                  <em>›</em>
+                </Link>
+              )}
             </div>
           </div>
         ))}

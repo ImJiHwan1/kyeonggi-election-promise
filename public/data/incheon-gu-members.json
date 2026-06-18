@@ -34,13 +34,13 @@
     "party_name": "국민의힘",
     "member": "김승자",
     "member_image": "/data/incheon-gu/김승자.gif",
-    "etc": "비례대표는 공약 없음"
+    "etc": "비례대표는 공약이 없습니다."
   },
   {
     "election_district": "비례대표",
     "party_name": "더불어민주당",
     "member": "조현정",
     "member_image": "/data/incheon-gu/조현정.gif",
-    "etc": "비례대표는 공약 없음"
+    "etc": "비례대표는 공약이 없습니다."
   }
 ]

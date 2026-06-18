@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import MemberDetailModal from '@components/MemberDetailModal.tsx';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -115,12 +115,11 @@ const DetailPage: React.FC = () => {
   return (
     <>
       <div className="wrapper pledge_contents">
-        {/* 헤더 */}
         <div className="pledge_head_container">
-          <img src="/images/etc/h_left_logo.png" alt="공약추적단 이미지" />
-          <a href="https://www.kyeonggi.com/">
+          <img style={{ cursor: 'pointer' }} src="/images/etc/h_left_logo.png" alt="공약추적단 이미지" onClick={() => navigate('/')} />
+          <Link to="https://www.kyeonggi.com/" target="_blank">
             <img src="/images/etc/h_right_logo.png" alt="경기일보로고" />
-          </a>
+          </Link>
         </div>
         {/* //헤더 */}
 
