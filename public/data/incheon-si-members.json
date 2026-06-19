@@ -173,7 +173,7 @@
     "election_district": "미추홀구 제1선거구",
     "party_name": "더불어민주당",
     "member": "이수현",
-    "member_image": "/data/incheon-si/이수현.gif",
+    "member_image": "/data/incheon-si/이수현.jpg",
     "pledge1": "제물포 북부역, 도화1구역 등 속도감 있는 원도심 재개발·재건축 추진",
     "pledge2": "제일시장, 공단시장, 석바위시장 등 지역 맞춤형 재래시장 활성화 및 특화시장 조성",
     "pledge3": "소상공인 및 자영업자 지원 (골목상점가 활성화, 소상공인 활성화센터 설립, 정책자금 확대)",
@@ -207,7 +207,7 @@
     "election_district": "미추홀구 제2선거구",
     "party_name": "더불어민주당",
     "member": "김오현",
-    "member_image": "/data/incheon-si/김오현.gif",
+    "member_image": "/data/incheon-si/김오현.jpg",
     "pledge1": "골목상권별 특화거리 조성 및 소상공인 디지털 전환 지원",
     "pledge2": "통신판매업자 성장지원 패키지 사업 지원",
     "pledge3": "주안역 남부역세권 상권 활성화",
@@ -271,7 +271,7 @@
     "election_district": "미추홀구 제3선거구",
     "party_name": "더불어민주당",
     "member": "김대영",
-    "member_image": "/data/incheon-si/김대영.gif",
+    "member_image": "/data/incheon-si/김대영.jpg",
     "pledge1": "전통시장 재정비 및 활용방안 모색",
     "pledge2": "인천도시철도 미추홀선(가칭) 추진",
     "pledge3": "수봉지구 고도제한 전면 완화",
@@ -583,7 +583,7 @@
     "election_district": "연수구 제6선거구",
     "party_name": "더불어민주당",
     "member": "정재훈",
-    "member_image": "/data/incheon-si/정재훈.jpg",
+    "member_image": "/data/incheon-si/정채훈.jpg",
     "pledge1": "아이넥스 착공 추진",
     "pledge2": "송도4동 중심 경제 발전",
     "pledge3": "스타트업 활성화와 창업 육성",
@@ -1290,7 +1290,7 @@
     "election_district": "비례대표",
     "party_name": "더불어민주당",
     "member": "방지현",
-    "member_image": "/data/incheon-si/방지현.gif",
+    "member_image": "/data/incheon-si/방지현.jpg",
     "etc": "비례대표는 공약이 없습니다."
   },
   {
@@ -1311,7 +1311,7 @@
     "election_district": "비례대표",
     "party_name": "국민의힘",
     "member": "안수경",
-    "member_image": "/data/incheon-si/안수경.gif",
+    "member_image": "/data/incheon-si/안수경.jpg",
     "etc": "비례대표는 공약이 없습니다."
   }
 ]
