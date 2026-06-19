@@ -2631,7 +2631,7 @@ span.txt_marking { position: relative; background-color: rgba(250, 242, 4, 0.58)
 .location_pledge_cotainer .lawmaker_list_container { margin-top: 30px; }
 .location_pledge_cotainer .lawmaker_list_container .lawmaker_card_flex { display: flex; gap: 12px; margin-bottom: 12px; }
 .location_pledge_cotainer .lawmaker_list_container .lawmaker_card_flex .lawmaker_card { display: flex; flex-direction: column;  justify-content: space-between; border: 1px #d7d7d7 solid; padding: 12px; }
-.location_pledge_cotainer .lawmaker_list_container .lawmaker_card_flex .lawmaker_card .card_location p { font-size: 16px; font-weight: 700; }
+.location_pledge_cotainer .lawmaker_list_container .lawmaker_card_flex .lawmaker_card .card_location p { font-size: 16px; font-weight: 600; }
 .location_pledge_cotainer .lawmaker_list_container .lawmaker_card_flex .lawmaker_card .card_location span { font-size: 13px; color: #666; }
 
 .location_pledge_cotainer .lawmaker_list_container .lawmaker_card_flex .lawmaker_card .lawmaker_profile { margin-top: 12px; justify-content: start; }
@@ -2639,7 +2639,7 @@ span.txt_marking { position: relative; background-color: rgba(250, 242, 4, 0.58)
 .location_pledge_cotainer .lawmaker_list_container .lawmaker_card_flex .lawmaker_card .lawmaker_profile .profile_thumb img { position: absolute; top: 0; left: 0; z-index: 1; width: 100%; height: 100%; object-position: center top; object-fit: cover; }
 .location_pledge_cotainer .lawmaker_list_container .lawmaker_card_flex .lawmaker_card .lawmaker_profile .profile_txt { width: 100%; }
 .location_pledge_cotainer .lawmaker_list_container .lawmaker_card_flex .lawmaker_card .lawmaker_profile .profile_txt .profile_con { padding-bottom: 7px; border-bottom: 1px #d7d7d7 solid; margin-bottom: 10px; }
-.location_pledge_cotainer .lawmaker_list_container .lawmaker_card_flex .lawmaker_card .lawmaker_profile .profile_txt .profile_con p.p_name { font-size: 16px; font-weight: 600; }
+.location_pledge_cotainer .lawmaker_list_container .lawmaker_card_flex .lawmaker_card .lawmaker_profile .profile_txt .profile_con p.p_name { font-size: 16px; font-weight: 700; }
 .location_pledge_cotainer .lawmaker_list_container .lawmaker_card_flex .lawmaker_card .lawmaker_profile .profile_txt .profile_con span.p_span { font-size: 13px; font-weight: 500; color:#073688; }
 .location_pledge_cotainer .lawmaker_list_container .lawmaker_card_flex .lawmaker_card .lawmaker_profile .profile_txt button.btn_w_view { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; padding: 7px; border: 1px #d7d7d7 solid; text-align: center; color: #333; }
 .location_pledge_cotainer .lawmaker_list_container .lawmaker_card_flex .lawmaker_card .lawmaker_profile .profile_txt button.btn_w_view span { position: absolute; right: 5px; font-size: 13px; padding-left: 10px; color: #666; }

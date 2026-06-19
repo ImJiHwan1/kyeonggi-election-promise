@@ -1,60 +1,51 @@
 import React from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { useCouncilMembers, useElectionDistricts } from '../hooks/useDataQuery';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import {
+  Box,
+  Chip,
+  CircularProgress,
   Dialog,
   DialogContent,
   DialogTitle,
+  Divider,
   IconButton,
-  Typography,
-  Chip,
-  CircularProgress,
   List,
   ListItem,
   ListItemText,
-  Box,
   Paper,
-  Divider,
   Table,
   TableBody,
   TableCell,
   TableContainer,
   TableRow,
+  Typography,
 } from '@mui/material';
+import { useCouncilMembers } from '../hooks/useDataQuery';
 import ScrollBarProvider from './ScrollBarProvider';
-import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
 const MemberDetailModal: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const memberName = searchParams.get('member');
   const districtName = searchParams.get('district');
   const region = searchParams.get('region') as any;
+  const electionArea = searchParams.get('electionArea');
 
   const isOpen = !!memberName && !!districtName && !!region;
 
   const { data: members, isLoading } = useCouncilMembers(region);
-  const { data: districtsData } = useElectionDistricts(region?.startsWith('gyeonggi') ? 'gyeonggi' : 'incheon');
 
-  const member = members?.find(
-    (m) => m.member === memberName && m.election_district === districtName
-  );
+  const member = members?.find((m) => m.member === memberName && m.election_district === districtName);
 
   const handleClose = () => {
     const newParams = new URLSearchParams(searchParams);
     newParams.delete('member');
     newParams.delete('district');
+    newParams.delete('electionArea');
     // We might want to keep region if it's used by the main page
     // For now let's just delete the ones that trigger the modal
     setSearchParams(newParams);
   };
-
-  const area = React.useMemo(() => {
-    if (!member || !districtsData) return null;
-    const district = districtsData.find(d =>
-      d.election_district.replace(/\s/g, '') === member.election_district.replace(/\s/g, '')
-    );
-    return district?.election_area;
-  }, [member, districtsData]);
 
   if (!isOpen) return null;
 
@@ -67,18 +58,11 @@ const MemberDetailModal: React.FC = () => {
     : [];
 
   return (
-    <Dialog
-      open={isOpen}
-      onClose={handleClose}
-      maxWidth="md"
-      fullWidth
-      scroll="paper"
-      PaperProps={{
-        sx: { borderRadius: 2 }
-      }}
-    >
+    <Dialog open={isOpen} onClose={handleClose} maxWidth="md" fullWidth scroll="paper">
       <DialogTitle sx={{ m: 0, p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Typography variant="h6" fontWeight="bold">의원 상세 정보</Typography>
+        <Typography variant="h6" fontWeight="bold">
+          의원 상세 정보
+        </Typography>
         <IconButton onClick={handleClose}>
           <CloseOutlinedIcon />
         </IconButton>
@@ -116,10 +100,9 @@ const MemberDetailModal: React.FC = () => {
                 }}
               />
               <Box sx={{ flex: 1 }}>
-                <div style={{ display: 'flex', alignItems: 'center',  gap: 8, marginBottom: 16, }}>
-                  <Chip label={member.party_name} color={member.party_name === '더불어민주당' ? "info": "error"} sx={{ fontSize: 16 }} />
-                  <span style={{ fontSize: 24, fontWeight: "bold" }}>{member.member} 의원</span>
-                  
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
+                  <Chip label={member.party_name} color={member.party_name === '더불어민주당' ? 'info' : 'error'} sx={{ fontSize: 16 }} />
+                  <span style={{ fontSize: 24, fontWeight: 'bold' }}>{member.member} 의원</span>
                 </div>
                 <TableContainer component={Paper} variant="outlined">
                   <Table size="small">
@@ -130,12 +113,12 @@ const MemberDetailModal: React.FC = () => {
                         </TableCell>
                         <TableCell>{member.election_district}</TableCell>
                       </TableRow>
-                      {area && (
+                      {electionArea && (
                         <TableRow>
                           <TableCell variant="head" sx={{ backgroundColor: '#f5f5f5', fontWeight: 'bold' }}>
                             포함 지역
                           </TableCell>
-                          <TableCell>{area}</TableCell>
+                          <TableCell>{electionArea}</TableCell>
                         </TableRow>
                       )}
                       {member.etc && (
@@ -174,12 +157,7 @@ const MemberDetailModal: React.FC = () => {
                           <ListItemText
                             primary={
                               <Box sx={{ display: 'flex' }}>
-                                <Typography
-                                  component="span"
-                                  variant="body1"
-                                  fontWeight="bold"
-                                  sx={{ mr: 1, minWidth: '24px' }}
-                                >
+                                <Typography component="span" variant="body1" fontWeight="bold" sx={{ mr: 1, minWidth: '24px' }}>
                                   {index + 1}.
                                 </Typography>
                                 <Typography component="span" variant="body1">
@@ -193,10 +171,8 @@ const MemberDetailModal: React.FC = () => {
                       </Box>
                     ))}
                   </List>
-                ) :(
-                  <Box sx={{ py: 4, textAlign: 'center', color: 'text.secondary' }}>
-                    등록된 공약 정보가 없습니다.
-                  </Box>
+                ) : (
+                  <Box sx={{ py: 4, textAlign: 'center', color: 'text.secondary' }}>등록된 공약 정보가 없습니다.</Box>
                 )}
               </ScrollBarProvider>
             </Box>

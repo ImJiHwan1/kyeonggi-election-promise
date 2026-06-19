@@ -29,8 +29,9 @@ const SearchBox: React.FC<SearchBoxProps> = ({ initialValue = '', region = 'gyeo
   const districts = [...(gyeonggiDistricts || []), ...(incheonDistricts || [])];
   const districtAreaMap = React.useMemo(() => {
     const map: Record<string, string> = {};
+    const normalize = (s: string) => s.replace(/\s/g, '').replace(/\(.*\)/, '');
     districts.forEach((d) => {
-      map[d.election_district.replace(/\s/g, '')] = d.election_area;
+      map[normalize(d.election_district)] = d.election_area;
     });
     return map;
   }, [districts]);
@@ -96,7 +97,6 @@ const SearchBox: React.FC<SearchBoxProps> = ({ initialValue = '', region = 'gyeo
           검색
         </button>
       )}
-
       {/* 검색 드롭다운 */}
       {isDropdownOpen && (
         <div className="search_dropdown" style={{ display: 'block' }}>
@@ -141,7 +141,8 @@ const SearchBox: React.FC<SearchBoxProps> = ({ initialValue = '', region = 'gyeo
               <div className="result_title">검색 결과</div>
               {filteredResults.length > 0 ? (
                 filteredResults.map((member, idx) => {
-                  const area = districtAreaMap[member.election_district.replace(/\s/g, '')];
+                  const areaKey = member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '');
+                  const area = districtAreaMap[areaKey];
                   return (
                     <div
                       key={`${member.member}-${member.election_district}-${idx}`}
@@ -149,13 +150,17 @@ const SearchBox: React.FC<SearchBoxProps> = ({ initialValue = '', region = 'gyeo
                       onClick={() => {
                         if (type === 'mobile') {
                           console.log('mobile');
-                          navigate(`/member/${member.member}/pledges?region=${(member as any).categoryId || ''}`);
+                          navigate(
+                            `/member/${member.member}/pledges?region=${(member as any).categoryId || ''}&electionArea=${area || ''}`,
+                            { replace: true },
+                          );
                         } else {
                           const params = new URLSearchParams();
                           params.set('member', member.member);
                           params.set('district', member.election_district);
                           params.set('region', (member as any).categoryId || region);
-                          navigate(`/detail?${params.toString()}`);
+                          params.set('electionArea', area || '');
+                          navigate(`/detail?${params.toString()}`, { replace: true });
                         }
                         addSearch(member.member);
                         setIsDropdownOpen(false);

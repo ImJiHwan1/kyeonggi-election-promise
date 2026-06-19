@@ -16,8 +16,8 @@ const DetailPage: React.FC = () => {
   const region = searchParams.get('region') || 'gyeonggi-do';
   const search = searchParams.get('search');
 
-  const { data: members, isLoading: membersLoading, isError: membersError } = useCouncilMembers(region as any);
   const { data: districtsData, isError: districtsError } = useElectionDistricts(region.startsWith('gyeonggi') ? 'gyeonggi' : 'incheon');
+  const { data: members, isLoading: membersLoading, isError: membersError } = useCouncilMembers(region as any);
   const [selectedCity, setSelectedCity] = useState<string>('전체');
   const [selectedDistrict, setSelectedDistrict] = useState<string>('전체');
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -31,8 +31,9 @@ const DetailPage: React.FC = () => {
   const districtAreaMap = useMemo(() => {
     if (!districtsData) return {};
     const map: Record<string, string> = {};
+    const normalize = (s: string) => s.replace(/\s/g, '').replace(/\(.*\)/, '');
     districtsData.forEach((d) => {
-      const key = d.election_district.replace(/\s/g, '');
+      const key = normalize(d.election_district);
       map[key] = d.election_area;
     });
     return map;
@@ -304,9 +305,9 @@ const DetailPage: React.FC = () => {
                         >
                           <div className="card_location">
                             <p>{member.election_district}</p>
-                            {districtAreaMap[member.election_district.replace(/\s/g, '')] && (
+                            {districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')] && (
                               <span style={{ fontSize: '0.8rem', color: '#777', display: 'block', marginTop: '4px' }}>
-                                ({districtAreaMap[member.election_district.replace(/\s/g, '')]})
+                                ({districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')]})
                               </span>
                             )}
                           </div>
@@ -327,6 +328,10 @@ const DetailPage: React.FC = () => {
                                   params.set('member', member.member);
                                   params.set('district', member.election_district);
                                   params.set('region', region);
+                                  params.set(
+                                    'electionArea',
+                                    districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')] || '',
+                                  );
                                   navigate(`${window.location.pathname}?${params.toString()}`, { replace: true });
                                 }}
                               >
