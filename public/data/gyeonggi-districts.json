@@ -21,11 +21,11 @@
     "council_type": "광역의회",
     "city_name": "수원시",
     "election_district": "수원시 제3선거구(권선구)",
-    "election_area": "서둔동, 구운동, 입북동, 율천동(수원시장안구)  "
+    "election_area": "서둔동, 구운동, 입북동, 율천동(수원시장안구)"
   },
   {
     "parent_council_id": "NULL",
-    "council_name": "경기도의회 ",
+    "council_name": "경기도의회",
     "council_type": "광역의회",
     "city_name": "수원시",
     "election_district": "수원시 제4선거구(권선구)",
@@ -69,7 +69,7 @@
     "council_type": "광역의회",
     "city_name": "수원시",
     "election_district": "수원시 제9선거구(영통구)",
-    "election_area": "광교1동, 광교2동  "
+    "election_area": "광교1동, 광교2동"
   },
   {
     "parent_council_id": "NULL",
@@ -477,7 +477,7 @@
     "council_type": "광역의회",
     "city_name": "부천시",
     "election_district": "부천시 제8선거구(소사구)",
-    "election_area": "소사본동, 소사본1동, 역곡1동(부천시원미구), 역곡2동(부천시원미구), 소사동(부천시원미구) "
+    "election_area": "소사본동, 소사본1동, 역곡1동(부천시원미구), 역곡2동(부천시원미구), 소사동(부천시원미구)"
   },
   {
     "parent_council_id": "NULL",
@@ -1069,7 +1069,7 @@
     "council_type": "광역의회",
     "city_name": "포천시",
     "election_district": "포천시 제1선거구(포천시)",
-    "election_area": "군내면, 신북면, 창수면, 영중면, 영북면, 관인면, 포천동, 선단동 "
+    "election_area": "군내면, 신북면, 창수면, 영중면, 영북면, 관인면, 포천동, 선단동"
   },
   {
     "parent_council_id": "NULL",

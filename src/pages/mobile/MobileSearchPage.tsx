@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import cn from 'classnames';
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
-import { useAllMembers } from '@/hooks/useDataQuery';
+import { useAllMembers, useElectionDistricts } from '@/hooks/useDataQuery';
 import { CouncilMember } from '@/types/data';
 
 const MobileSearchPage = () => {
@@ -10,6 +10,18 @@ const MobileSearchPage = () => {
   const query = searchParams.get('q') as 'string' | null;
 
   const { data: allMembers } = useAllMembers();
+  const { data: gyDistricts } = useElectionDistricts('gyeonggi');
+  const { data: icDistricts } = useElectionDistricts('incheon');
+
+  const districtAreaMap = useMemo(() => {
+    const map: Record<string, string> = {};
+    const normalize = (s: string) => s.replace(/\s/g, '').replace(/\(.*\)/, '');
+    [...(gyDistricts || []), ...(icDistricts || [])].forEach((d) => {
+      const key = normalize(d.election_district);
+      map[key] = d.election_area;
+    });
+    return map;
+  }, [gyDistricts, icDistricts]);
 
   const filteredMembers = useMemo(() => {
     if (!allMembers || !query) return [];
@@ -37,6 +49,12 @@ const MobileSearchPage = () => {
               <img src={member.member_image || '/images/etc/ansan_mayer.png'} alt="" />
             </div>
             <div className="member_info">
+              <p style={{ fontSize: '0.8rem', color: '#666', marginBottom: '4px' }}>{member.election_district}</p>
+              {districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')] && (
+                <p style={{ fontSize: '0.8rem', color: '#666', marginBottom: '4px' }}>
+                  ({districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')]})
+                </p>
+              )}
               <strong>{member.member} 의원</strong>
               <span className={cn({ party_blue: member.party_name === '더불어민주당', party_red: member.party_name === '국민의힘' })}>
                 {member.party_name}
@@ -44,7 +62,10 @@ const MobileSearchPage = () => {
               {member.etc ? (
                 <p style={{ marginTop: 28 }}>{member.etc}</p>
               ) : (
-                <Link to={`/member/${member.member}/pledges?region=${member.categoryId}`} className="pledge_btn">
+                <Link
+                  to={`/member/${member.member}/pledges?region=${member.categoryId}&electionArea=${districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')] || ''}`}
+                  className="pledge_btn"
+                >
                   공약사항 보기
                   <em>›</em>
                 </Link>
