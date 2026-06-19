@@ -49,7 +49,15 @@ const DetailPage: React.FC = () => {
     });
 
     const uniqueDistricts = Array.from(new Set(cityMembers.map((m) => m.election_district)));
-    return uniqueDistricts.sort();
+
+    return uniqueDistricts.sort((a, b) => {
+      const matchA = a.match(/제(\d+)선거구/);
+      const matchB = b.match(/제(\d+)선거구/);
+
+      const numA = matchA ? Number(matchA[1]) : 0;
+      const numB = matchB ? Number(matchB[1]) : 0;
+      return numA - numB;
+    });
   }, [members, selectedCity]);
 
   useEffect(() => {
@@ -111,6 +119,8 @@ const DetailPage: React.FC = () => {
     if (region.startsWith('gyeonggi')) return '/images/etc/ky01_map.png';
     return '/images/etc/ic01_map.png';
   };
+
+  console.log(districts);
 
   return (
     <>
