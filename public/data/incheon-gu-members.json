@@ -924,7 +924,20 @@
     "election_district": "연수마선거구",
     "party_name": "국민의힘",
     "member": "정민균",
-    "member_image": "/data/incheon-gu/정민균.jpg"
+    "member_image": "/data/incheon-gu/정민균.jpg",
+    "pledge1": "집합건물 전담 부서 신설",
+    "pledge2": "인천대교 무소음 포장공사 추진",
+    "pledge3": "9공구 근린공원 빠른 착공 및 완공",
+    "pledge4": "보행녹도 추진 (3호 근린공원, 송담초등학교 등)",
+    "pledge5": "송도5동 행정복지센터 앞 삼거리를 사거리로 확장",
+    "pledge6": "공영버스 노선 조정 및 추가",
+    "pledge7": "송도분구 추진",
+    "pledge8": "송도보건지소 건립",
+    "pledge9": "B1·B2 부지 우선개발",
+    "pledge10": "복합체육센터 건립",
+    "pledge11": "인천지하철 1호선 조기 착공 및 개통",
+    "pledge12": "송도파크골프장 추진",
+    "pledge13": "중학교배정시 근거리 배정기준 확대"
   },
   {
     "election_district": "연수바선거구",
@@ -1441,7 +1454,27 @@
     "election_district": "영종구 가선거구",
     "party_name": "국민의힘",
     "member": "손은비",
-    "member_image": "/data/incheon-gu/손은비.jpg"
+    "member_image": "/data/incheon-gu/손은비.jpg",
+    "pledge1": "MRO 산업단지 조성",
+    "pledge2": "농어업 소득증대 사업 지원",
+    "pledge3": "문화예술인 지원 확대",
+    "pledge4": "청년공간 지원사업 확대",
+    "pledge5": "종합병원 유치 추진",
+    "pledge6": "제2공항철도 추진(KTX·GTX·경강선·수인분당선 유치)",
+    "pledge7": "고도제한 완화",
+    "pledge8": "영종트램 추진",
+    "pledge9": "종합체육시설 건립 추진",
+    "pledge10": "문화회관 건립 추진",
+    "pledge11": "미개발지 조속 개발 추진",
+    "pledge12": "서울지하철 9호선 직결",
+    "pledge13": "버스노선 전면 개편 추진",
+    "pledge14": "용유지구·2지구 조속 추진",
+    "pledge15": "도시가스·상하수도 보급",
+    "pledge16": "용유역 신설",
+    "pledge17": "교육지원청 유치",
+    "pledge18": "학교·특성화고·대학 유치",
+    "pledge19": "대형 도서관 건립 추진",
+    "pledge20": "어린이집·유치원 확충"
   },
   {
     "election_district": "영종구 나선거구",
@@ -2292,7 +2325,10 @@
     "election_district": "계양구 다선거구",
     "party_name": "국민의힘",
     "member": "이상호",
-    "member_image": "/data/incheon-gu/이상호.jpg"
+    "member_image": "/data/incheon-gu/이상호.jpg",
+    "pledge1": "(노동) 청년이 도전하고 성공하는 계양",
+    "pledge2": "(아동) 아이 낳고 키우는 게 축복이 되는 계양",
+    "pledge3": "어르신이 존중받고 편안한 계양"
   },
   {
     "election_district": "계양구 라선거구",
