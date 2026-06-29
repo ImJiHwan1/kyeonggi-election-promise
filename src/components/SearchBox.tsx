@@ -29,9 +29,11 @@ const SearchBox: React.FC<SearchBoxProps> = ({ initialValue = '', region = 'gyeo
   const districts = [...(gyeonggiDistricts || []), ...(incheonDistricts || [])];
   const districtAreaMap = React.useMemo(() => {
     const map: Record<string, string> = {};
-    const normalize = (s: string) => s.replace(/\s/g, '').replace(/\(.*\)/, '');
+    const normalize = (s: string) => (s || '').replace(/\s/g, '').replace(/\(.*\)/, '');
     districts.forEach((d) => {
-      map[normalize(d.election_district)] = d.election_area;
+      if (d.election_district) {
+        map[normalize(d.election_district)] = d.election_area;
+      }
     });
     return map;
   }, [districts]);
@@ -58,13 +60,17 @@ const SearchBox: React.FC<SearchBoxProps> = ({ initialValue = '', region = 'gyeo
     if (!searchValue.trim() || !allMembers) return [];
     const searchLower = searchValue.toLowerCase().replace(/\s/g, '');
     return allMembers
-      .filter(
-        (m) =>
-          m.member.toLowerCase().replace(/\s/g, '').includes(searchLower) ||
-          m.election_district.toLowerCase().replace(/\s/g, '').includes(searchLower),
-      )
+      .filter((m) => {
+        if (!m || !m.member) return false;
+        const memberName = m.member.toLowerCase().replace(/\s/g, '');
+        const districtName = (m.election_district || '').toLowerCase().replace(/\s/g, '');
+        const areaKey = (m.election_district || '').replace(/\s/g, '').replace(/\(.*\)/, '');
+        const areaName = (districtAreaMap[areaKey] || '').toLowerCase().replace(/\s/g, '');
+
+        return memberName.includes(searchLower) || districtName.includes(searchLower) || areaName.includes(searchLower);
+      })
       .slice(0, 10);
-  }, [searchValue, allMembers]);
+  }, [searchValue, allMembers, districtAreaMap]);
 
   return (
     <div
@@ -141,23 +147,24 @@ const SearchBox: React.FC<SearchBoxProps> = ({ initialValue = '', region = 'gyeo
               <div className="result_title">검색 결과</div>
               {filteredResults.length > 0 ? (
                 filteredResults.map((member, idx) => {
-                  const areaKey = member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '');
+                  const district = member.election_district || '';
+                  const areaKey = district.replace(/\s/g, '').replace(/\(.*\)/, '');
                   const area = districtAreaMap[areaKey];
                   return (
                     <div
-                      key={`${member.member}-${member.election_district}-${idx}`}
+                      key={`${member.member}-${district}-${idx}`}
                       className="result_item"
                       onClick={() => {
                         if (type === 'mobile') {
                           console.log('mobile');
                           navigate(
-                            `/member/${member.member}/pledges?region=${(member as any).categoryId || ''}&electionArea=${area || ''}`,
+                            `/member/${member.member}/pledges?region=${(member as any).categoryId || ''}&district=${encodeURIComponent(district)}&electionArea=${area || ''}`,
                             { replace: true },
                           );
                         } else {
                           const params = new URLSearchParams();
                           params.set('member', member.member);
-                          params.set('district', member.election_district);
+                          params.set('district', district);
                           params.set('region', (member as any).categoryId || region);
                           params.set('electionArea', area || '');
                           navigate(`/detail?${params.toString()}`, { replace: true });
@@ -169,7 +176,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({ initialValue = '', region = 'gyeo
                     >
                       <div className="result_info">
                         <strong>
-                          {member.election_district}
+                          {district}
                           <br />
                           {area && <span>({area})</span>}
                         </strong>

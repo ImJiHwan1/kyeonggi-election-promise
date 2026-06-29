@@ -129,7 +129,7 @@ const LandingView: React.FC = () => {
             {/* //버튼 */}
           </div>
           {/* //경기도시군의회 공약보기 */}
-          {/* 인천광역시 구군의원 공약보기 */}
+          {/* 인천광역시 군구의원 공약보기 */}
           <div className="pledge_menu_box ic02">
             <img src="/images/etc/menu_04_top.png" alt="상단이미지" />
             {/* 타이틀 */}
@@ -137,12 +137,12 @@ const LandingView: React.FC = () => {
               <div className="pledge_mark">
                 <img src="/images/ico/menu_title_ico_03.png" alt="메뉴아이콘" />
               </div>
-              <span>인천광역시 11개 구군의원 공약</span>
+              <span>인천광역시 11개 군구의원 공약</span>
             </div>
             {/* //타이틀 */}
             {/* 내용 */}
             <p>
-              인천광역시 11개 구·군 의원들의
+              인천광역시 11개 군·구 의원들의
               <br />
               공약을 확인하세요.
             </p>
@@ -154,7 +154,7 @@ const LandingView: React.FC = () => {
             </button>
             {/* //버튼 */}
           </div>
-          {/* //인천광역시 구군의원 공약보기 */}
+          {/* //인천광역시 군구의원 공약보기 */}
         </div>
         {/* //하단 메뉴영역 */}
       </div>

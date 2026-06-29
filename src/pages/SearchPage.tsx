@@ -14,16 +14,12 @@ const SearchPage: React.FC = () => {
   const query = searchParams.get('q') || '';
 
   const { data: allMembers, isLoading, isError } = useAllMembers();
-
-  // We might need district info for inclusion areas, but useAllMembers doesn't have it easily.
-  // For search page, maybe we skip inclusion area or fetch all districts too.
-  // Let's fetch both regions' districts for more info.
   const { data: gyDistricts } = useElectionDistricts('gyeonggi');
   const { data: icDistricts } = useElectionDistricts('incheon');
 
   const districtAreaMap = useMemo(() => {
     const map: Record<string, string> = {};
-    const normalize = (s: string) => s.replace(/\s/g, '').replace(/\(.*\)/, '');
+    const normalize = (s: string) => (s || '').replace(/\s/g, '').replace(/\(.*\)/, '');
     [...(gyDistricts || []), ...(icDistricts || [])].forEach((d) => {
       const key = normalize(d.election_district);
       map[key] = d.election_area;
@@ -35,10 +31,16 @@ const SearchPage: React.FC = () => {
     if (!allMembers || !query) return [];
     const searchLower = query.toLowerCase().replace(/\s/g, '');
 
-    return allMembers.filter(
-      (m) => m.member.replace(/\s/g, '').includes(searchLower) || m.election_district.replace(/\s/g, '').includes(searchLower),
-    );
-  }, [allMembers, query]);
+    return allMembers.filter((m) => {
+      if (!m || !m.member) return false;
+      const memberName = m.member.toLowerCase().replace(/\s/g, '');
+      const districtName = (m.election_district || '').toLowerCase().replace(/\s/g, '');
+      const areaKey = (m.election_district || '').replace(/\s/g, '').replace(/\(.*\)/, '');
+      const areaName = (districtAreaMap[areaKey] || '').toLowerCase().replace(/\s/g, '');
+
+      return memberName.includes(searchLower) || districtName.includes(searchLower) || areaName.includes(searchLower);
+    });
+  }, [allMembers, query, districtAreaMap]);
 
   return (
     <>
@@ -104,16 +106,16 @@ const SearchPage: React.FC = () => {
                           <p style={{ fontSize: '0.85rem', color: '#1976d2', fontWeight: 'bold', marginBottom: '4px' }}>
                             {member.category}
                           </p>
-                          <p>{member.election_district}</p>
-                          {districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')] && (
+                          <p>{member.election_district || ''}</p>
+                          {districtAreaMap[(member.election_district || '').replace(/\s/g, '').replace(/\(.*\)/, '')] && (
                             <span style={{ fontSize: '0.8rem', color: '#777', display: 'block', marginTop: '4px' }}>
-                              ({districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')]})
+                              ({districtAreaMap[(member.election_district || '').replace(/\s/g, '').replace(/\(.*\)/, '')]})
                             </span>
                           )}
                         </div>
                         <div className="media lawmaker_profile">
                           <div className="profile_thumb">
-                            <img src={member.member_image || '/images/etc/lawmaker_img_01.jpg'} alt={member.member} />
+                            <img src={member.member_image || '/images/etc/no_img_vertical.png'} alt={member.member} />
                           </div>
                           <div className="profile_txt">
                             <div className="profile_con">
@@ -124,14 +126,12 @@ const SearchPage: React.FC = () => {
                               type="button"
                               className="btn btn_w_view"
                               onClick={() => {
+                                const district = member.election_district || '';
                                 const params = new URLSearchParams(searchParams);
                                 params.set('member', member.member);
-                                params.set('district', member.election_district);
+                                params.set('district', district);
                                 params.set('region', member.categoryId);
-                                params.set(
-                                  'electionArea',
-                                  districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')] || '',
-                                );
+                                params.set('electionArea', districtAreaMap[district.replace(/\s/g, '').replace(/\(.*\)/, '')] || '');
                                 navigate(`/search?${params.toString()}`, { replace: true });
                               }}
                             >

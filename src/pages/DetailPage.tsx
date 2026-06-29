@@ -46,7 +46,7 @@ const DetailPage: React.FC = () => {
       if (selectedCity === '비례대표') {
         return m.election_district.includes('비례대표');
       }
-      return m.election_district.replace(/\s/g, '').includes(selectedCity.replace(/\s/g, ''));
+      return m.election_district.replace(/\s/g, '').startsWith(selectedCity.replace(/\s/g, ''));
     });
 
     const uniqueDistricts = Array.from(new Set(cityMembers.map((m) => m.election_district)));
@@ -73,7 +73,7 @@ const DetailPage: React.FC = () => {
         if (selectedCity === '비례대표') {
           return m.election_district.includes('비례대표');
         }
-        return m.election_district.replace(/\s/g, '').includes(selectedCity.replace(/\s/g, ''));
+        return m.election_district.replace(/\s/g, '').startsWith(selectedCity.replace(/\s/g, ''));
       });
     }
 
@@ -84,7 +84,8 @@ const DetailPage: React.FC = () => {
     if (search) {
       const searchLower = search.toLowerCase().replace(/\s/g, '');
       result = result.filter(
-        (m) => m.member.replace(/\s/g, '').includes(searchLower) || m.election_district.replace(/\s/g, '').includes(searchLower),
+        (m) =>
+          (m.member || '').replace(/\s/g, '').includes(searchLower) || (m.election_district || '').replace(/\s/g, '').includes(searchLower),
       );
     }
     return result;
@@ -311,12 +312,24 @@ const DetailPage: React.FC = () => {
                           </div>
                           <div className="media lawmaker_profile">
                             <div className="profile_thumb">
-                              <img src={member.member_image || '/images/etc/lawmaker_img_01.jpg'} alt={member.member} />
+                              <img src={member.member_image || '/images/etc/no_img_vertical.png'} alt={member.member} />
                             </div>
                             <div className="profile_txt">
                               <div className="profile_con">
                                 <p className="p_name">{member.member} 의원</p>
-                                <span className="p_span">{member.party_name}</span>
+                                <span
+                                  className="p_span"
+                                  style={{
+                                    color:
+                                      member.party_name === '더불어민주당'
+                                        ? '#0288d1'
+                                        : member.party_name === '국민의힘'
+                                          ? '#d32f2f'
+                                          : 'inherit',
+                                  }}
+                                >
+                                  {member.party_name}
+                                </span>
                               </div>
                               <button
                                 type="button"

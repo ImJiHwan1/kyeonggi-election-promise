@@ -96,8 +96,8 @@ const Header: React.FC = () => {
     ? allMembers
         ?.filter(
           (m) =>
-            m.member.toLowerCase().replace(/\s/g, '').includes(searchQuery.toLowerCase().replace(/\s/g, '')) ||
-            m.election_district.toLowerCase().replace(/\s/g, '').includes(searchQuery.toLowerCase().replace(/\s/g, '')),
+            (m.member || '').toLowerCase().replace(/\s/g, '').includes(searchQuery.toLowerCase().replace(/\s/g, '')) ||
+            (m.election_district || '').toLowerCase().replace(/\s/g, '').includes(searchQuery.toLowerCase().replace(/\s/g, '')),
         )
         .slice(0, 10)
     : [];

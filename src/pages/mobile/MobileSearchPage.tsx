@@ -15,7 +15,7 @@ const MobileSearchPage = () => {
 
   const districtAreaMap = useMemo(() => {
     const map: Record<string, string> = {};
-    const normalize = (s: string) => s.replace(/\s/g, '').replace(/\(.*\)/, '');
+    const normalize = (s: string) => (s || '').replace(/\s/g, '').replace(/\(.*\)/, '');
     [...(gyDistricts || []), ...(icDistricts || [])].forEach((d) => {
       const key = normalize(d.election_district);
       map[key] = d.election_area;
@@ -28,7 +28,8 @@ const MobileSearchPage = () => {
     const searchLower = query.toLowerCase().replace(/\s/g, '');
 
     return allMembers.filter(
-      (m) => m.member.replace(/\s/g, '').includes(searchLower) || m.election_district.replace(/\s/g, '').includes(searchLower),
+      (m) =>
+        (m.member || '').replace(/\s/g, '').includes(searchLower) || (m.election_district || '').replace(/\s/g, '').includes(searchLower),
     );
   }, [allMembers, query]);
 
@@ -46,7 +47,7 @@ const MobileSearchPage = () => {
         {filteredMembers.map((member: CouncilMember) => (
           <div key={member.member} className="member_card">
             <div className="member_thumb">
-              <img src={member.member_image || '/images/etc/ansan_mayer.png'} alt="" />
+              <img src={member.member_image || '/images/etc/no_img_vertical.png'} alt="" />
             </div>
             <div className="member_info">
               <p style={{ fontSize: '0.8rem', color: '#666', marginBottom: '4px' }}>{member.election_district}</p>
@@ -63,7 +64,7 @@ const MobileSearchPage = () => {
                 <p style={{ marginTop: 28 }}>{member.etc}</p>
               ) : (
                 <Link
-                  to={`/member/${member.member}/pledges?region=${member.categoryId}&electionArea=${districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')] || ''}`}
+                  to={`/member/${member.member}/pledges?region=${member.categoryId}&district=${encodeURIComponent(member.election_district)}&electionArea=${districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')] || ''}`}
                   className="pledge_btn"
                 >
                   공약사항 보기

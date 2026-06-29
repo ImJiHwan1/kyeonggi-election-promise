@@ -948,7 +948,7 @@
     "council_name": "경기도의회",
     "council_type": "광역의회",
     "city_name": "광명시",
-    "election_district": "광명시 제2선거구(양주시)",
+    "election_district": "광명시 제2선거구(광명시)",
     "election_area": "광명4동, 광명5동, 광명6동, 광명7동, 철산4동, 학온동"
   },
   {
@@ -956,7 +956,7 @@
     "council_name": "경기도의회",
     "council_type": "광역의회",
     "city_name": "광명시",
-    "election_district": "광명시 제3선거구(양주시)",
+    "election_district": "광명시 제3선거구(광명시)",
     "election_area": "하안1동, 하안2동, 하안3동, 하안4동"
   },
   {
@@ -964,7 +964,7 @@
     "council_name": "경기도의회",
     "council_type": "광역의회",
     "city_name": "광명시",
-    "election_district": "광명시 제4선거구(양주시)",
+    "election_district": "광명시 제4선거구(광명시)",
     "election_area": "소하1동, 소하2동, 일직동"
   },
   {
@@ -1044,7 +1044,7 @@
     "council_name": "경기도의회",
     "council_type": "광역의회",
     "city_name": "안성시",
-    "election_district": "안성시 제2선거구(이천시)",
+    "election_district": "안성시 제2선거구(안성시)",
     "election_area": "보개면, 금광면, 서운면, 일죽면, 죽산면, 삼죽면, 안성1동, 안성2동"
   },
   {

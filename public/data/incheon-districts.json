@@ -5,7 +5,7 @@
     "council_type": "광역의회",
     "city_name": "강화군",
     "election_district": "강화군 선거구(강화군)",
-    "election_area": "도화1동,도화2-3동,주안5동)"
+    "election_area": "강화읍, 선원면, 불은면, 길상면, 화도면, 양도면, 내가면, 하점면, 양사면, 송해면, 교동면, 삼산면, 서도면"
   },
   {
     "parent_council_id": "NULL",
@@ -13,7 +13,7 @@
     "council_type": "광역의회",
     "city_name": "옹진군",
     "election_district": "옹진군 선거구(옹진군)",
-    "election_area": "주안1동,주안2동"
+    "election_area": "북도면, 연평면, 백령면, 대청면, 대이작면, 자월면, 영흥면"
   },
   {
     "parent_council_id": "NULL",
@@ -259,32 +259,32 @@
     "parent_council_id": "NULL",
     "council_name": "인천광역시의회",
     "council_type": "광역의회",
-    "city_name": "서구",
-    "election_district": "서구제1선거구(서구)",
+    "city_name": "서해구",
+    "election_district": "서해구제1선거구(서해구)",
     "election_area": "청라1동, 청라2동, 청라3동"
   },
   {
     "parent_council_id": "NULL",
     "council_name": "인천광역시의회",
     "council_type": "광역의회",
-    "city_name": "서구",
-    "election_district": "서구제2선거구(서구)",
+    "city_name": "서해구",
+    "election_district": "서해구제2선거구(서해구)",
     "election_area": "석남1동, 석남2동, 석남3동, 가좌1동, 가좌2동, 가좌3동, 가좌4동"
   },
   {
     "parent_council_id": "NULL",
     "council_name": "인천광역시의회",
     "council_type": "광역의회",
-    "city_name": "서구",
-    "election_district": "서구제3선거구(서구)",
+    "city_name": "서해구",
+    "election_district": "서해구제3선거구(서해구)",
     "election_area": "가정1동, 가정2동, 가정3동, 신현원창동"
   },
   {
     "parent_council_id": "NULL",
     "council_name": "인천광역시의회",
     "council_type": "광역의회",
-    "city_name": "서구",
-    "election_district": "서구제4선거구(서구)",
+    "city_name": "서해구",
+    "election_district": "서해구제4선거구(서해구)",
     "election_area": "검암경서동, 연희동"
   },
   {
@@ -593,34 +593,34 @@
   },
   {
     "parent_council_id": "인천광역시의회",
-    "council_name": "서구의회",
+    "council_name": "서해구의회",
     "council_type": "기초의회",
-    "city_name": "서구",
-    "election_district": "서구가선거구(서구)",
+    "city_name": "서해구",
+    "election_district": "서해구가선거구(서해구)",
     "election_area": "청라1동, 청라2동, 청라3동"
   },
   {
     "parent_council_id": "인천광역시의회",
-    "council_name": "서구의회",
+    "council_name": "서해구의회",
     "council_type": "기초의회",
-    "city_name": "서구",
-    "election_district": "서구나선거구(서구)",
+    "city_name": "서해구",
+    "election_district": "서해구나선거구(서해구)",
     "election_area": "석남1동, 석남2동, 석남3동, 가좌1동, 가좌2동, 가좌3동, 가좌4동"
   },
   {
     "parent_council_id": "인천광역시의회",
-    "council_name": "서구의회",
+    "council_name": "서해구의회",
     "council_type": "기초의회",
-    "city_name": "서구",
-    "election_district": "서구다선거구(서구)",
+    "city_name": "서해구",
+    "election_district": "서해구다선거구(서해구)",
     "election_area": "가정1동, 가정2동, 가정3동, 신현원창동"
   },
   {
     "parent_council_id": "인천광역시의회",
-    "council_name": "서구의회",
+    "council_name": "서해구의회",
     "council_type": "기초의회",
-    "city_name": "서구",
-    "election_district": "서구라선거구(서구)",
+    "city_name": "서해구",
+    "election_district": "서해구라선거구(서해구)",
     "election_area": "검암경서동, 연희동"
   },
   {
