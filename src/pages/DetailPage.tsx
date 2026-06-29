@@ -121,8 +121,6 @@ const DetailPage: React.FC = () => {
     return '/images/etc/ic01_map.png';
   };
 
-  console.log(districts);
-
   return (
     <>
       <div className="wrapper pledge_contents">
@@ -325,6 +323,7 @@ const DetailPage: React.FC = () => {
                                 className="btn btn_w_view"
                                 onClick={() => {
                                   const params = new URLSearchParams();
+
                                   params.set('member', member.member);
                                   params.set('district', member.election_district);
                                   params.set('region', region);
@@ -332,6 +331,7 @@ const DetailPage: React.FC = () => {
                                     'electionArea',
                                     districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')] || '',
                                   );
+
                                   navigate(`${window.location.pathname}?${params.toString()}`, { replace: true });
                                 }}
                               >

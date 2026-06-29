@@ -61,14 +61,14 @@ export const useAllMembers = () => {
         { id: 'incheon-si', name: '인천광역시의원' },
         { id: 'incheon-gu', name: '인천광역시구군위원' },
       ];
-      
+
       const results = await Promise.all(
         types.map(async (type) => {
           const data = await fetchData<CouncilMember>(`${type.id}-members`);
-          return data.map(member => ({ ...member, category: type.name, categoryId: type.id }));
-        })
+          return data.map((member) => ({ ...member, category: type.name, categoryId: type.id }));
+        }),
       );
-      
+
       return results.flat() as any;
     },
   });
