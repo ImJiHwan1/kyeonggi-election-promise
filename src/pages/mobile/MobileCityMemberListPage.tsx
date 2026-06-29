@@ -32,7 +32,7 @@ const MobileCityMemberListPage = () => {
       if (cityName === '비례대표') {
         return m.election_district.includes('비례대표');
       }
-      return m.election_district.replace(/\s/g, '').includes(cityName.replace(/\s/g, ''));
+      return m.election_district.replace(/\s/g, '').startsWith(cityName.replace(/\s/g, ''));
     });
 
     const uniqueDistricts = Array.from(new Set(cityMembers.map((m) => m)));
@@ -126,7 +126,7 @@ const MobileCityMemberListPage = () => {
         {districtMembers.map((member: CouncilMember) => (
           <div key={member.member} className="member_card">
             <div className="member_thumb">
-              <img src={member.member_image || '/images/etc/ansan_mayer.png'} alt="" />
+              <img src={member.member_image || '/images/etc/no_img_vertical.png'} alt="" />
             </div>
             <div className="member_info">
               <strong>{member.member} 의원</strong>
@@ -137,7 +137,7 @@ const MobileCityMemberListPage = () => {
                 <p style={{ marginTop: 28 }}>{member.etc}</p>
               ) : (
                 <Link
-                  to={`/member/${member.member}/pledges?region=${region}&electionArea=${districtAreaMap[selectedDistrict?.election_district.replace(/\s/g, '').replace(/\(.*\)/, '') || ''] || ''}`}
+                  to={`/member/${member.member}/pledges?region=${region}&district=${encodeURIComponent(member.election_district)}&electionArea=${districtAreaMap[selectedDistrict?.election_district.replace(/\s/g, '').replace(/\(.*\)/, '') || ''] || ''}`}
                   className="pledge_btn"
                 >
                   공약사항 보기

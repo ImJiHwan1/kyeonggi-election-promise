@@ -152,7 +152,7 @@ const MemberDetailModal: React.FC = () => {
                       <Box
                         component="img"
                         alt={member.member}
-                        src={member.member_image || 'https://via.placeholder.com/150'}
+                        src={member.member_image || '/images/etc/no_img_vertical.png'}
                         sx={{
                           width: 200,
                           height: 260,

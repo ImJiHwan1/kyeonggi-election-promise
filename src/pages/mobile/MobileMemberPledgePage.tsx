@@ -9,11 +9,17 @@ const MobileMemberPledgePage = () => {
 
   const [searchParams] = useSearchParams();
   const region = searchParams.get('region') as 'gyeonggi-si' | 'gyeonggi-do' | 'incheon-si' | 'incheon-gu' | null;
-  const electionArea = searchParams.get('electionArea') as 'string' | null;
+  const district = searchParams.get('district');
+  const electionArea = searchParams.get('electionArea');
 
   const { data: membersData } = useCouncilMembers(region || 'gyeonggi-do');
 
-  const member: CouncilMember | undefined = membersData?.find((m) => m.member === memberId);
+  const member: CouncilMember | undefined = membersData?.find((m) => {
+    if (district) {
+      return m.member === memberId && m.election_district === district;
+    }
+    return m.member === memberId;
+  });
 
   if (!member) {
     return <div>Loading...</div>;
@@ -40,7 +46,7 @@ const MobileMemberPledgePage = () => {
 
         <div className="member_card">
           <div className="member_thumb">
-            <img src={member.member_image || '/images/etc/ansan_mayer.png'} alt="" />
+            <img src={member.member_image || '/images/etc/no_img_vertical.png'} alt="" />
           </div>
           <div className="member_info">
             <strong>{member.member} 의원</strong>
@@ -54,6 +60,23 @@ const MobileMemberPledgePage = () => {
           <div className="pledge_head">
             <strong>공약사항</strong>
           </div>
+          {member.etc && (
+            <div
+              className="etc_pledge_notice"
+              style={{
+                padding: '20px',
+                textAlign: 'center',
+                backgroundColor: '#f9f9f9',
+                marginBottom: '10px',
+                borderRadius: '8px',
+                color: '#222',
+                fontWeight: 'bold',
+                wordBreak: 'keep-all',
+              }}
+            >
+              {member.etc}
+            </div>
+          )}
           <ul className="pledge_list">
             {pledges?.map((pledge, index) => (
               <li key={index}>
