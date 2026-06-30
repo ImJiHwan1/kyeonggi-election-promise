@@ -187,14 +187,6 @@ const MemberDetailModal: React.FC = () => {
                                   <TableCell>{electionArea}</TableCell>
                                 </TableRow>
                               )}
-                              {member.etc && (
-                                <TableRow>
-                                  <TableCell variant="head" sx={{ backgroundColor: '#f5f5f5', fontWeight: 'bold' }}>
-                                    참고
-                                  </TableCell>
-                                  <TableCell>{member.etc}</TableCell>
-                                </TableRow>
-                              )}
                             </TableBody>
                           </Table>
                         </TableContainer>
@@ -210,7 +202,7 @@ const MemberDetailModal: React.FC = () => {
                         fontWeight: 'bold',
                       }}
                     >
-                      핵심 공약 목록
+                      공약사항
                     </Typography>
 
                     <Box sx={{ height: 400 }}>
@@ -238,7 +230,9 @@ const MemberDetailModal: React.FC = () => {
                             ))}
                           </List>
                         ) : (
-                          <Box sx={{ py: 4, textAlign: 'center', color: 'text.secondary' }}>등록된 공약 정보가 없습니다.</Box>
+                          <Box sx={{ py: 4, textAlign: 'center', color: 'text.secondary' }}>
+                            {member.etc || '등록된 공약 정보가 없습니다.'}
+                          </Box>
                         )}
                       </ScrollBarProvider>
                     </Box>
