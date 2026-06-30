@@ -1,4 +1,6 @@
-import { Link, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Header from '@components/Header.tsx';
 import SearchBox from '../components/SearchBox';
 
 // Landing View Component
@@ -7,19 +9,10 @@ const LandingView: React.FC = () => {
 
   return (
     <div className="wrapper pledge_contents">
-      {/* 헤더 */}
-      <div className="pledge_head_container">
-        <img src="/images/etc/h_left_logo.png" alt="공약추적단 이미지" />
-        <Link to="https://www.kyeonggi.com/" target="_blank">
-          <img src="/images/etc/h_right_logo.png" alt="경기일보로고" />
-        </Link>
-      </div>
-      {/* //헤더 */}
-      {/* 콘텐츠 */}
+      <Header />
+
       <div className="pledge_contents_container">
-        {/* 상단 대시보드 */}
         <div className="top_dash">
-          {/* 좌측 콘텐츠 */}
           <div className="left_dash_txt">
             <div className="top_title">
               <h1>지방의원 공약 추적단</h1>
@@ -41,69 +34,59 @@ const LandingView: React.FC = () => {
               </div>
             </div>
           </div>
-          {/* //좌측 콘텐츠 */}
-          {/* 우측 콘텐츠 */}
           <div className="right_dash_con">
             <SearchBox />
           </div>
-          {/* //우측 콘텐츠 */}
         </div>
-        {/* //상단 대시보드 */}
-        {/* 하단 메뉴영역 */}
         <div className="under_menu_container">
           {/* 경기도 의원공약보기 */}
           <div className="pledge_menu_box ky01">
             <img src="/images/etc/menu_01_top.png" alt="상단이미지" />
             {/* 타이틀 */}
-            <div className="location_pledge_title">
+            <div className="location_pledge_title f_a_j_c">
               <div className="pledge_mark">
                 <img src="/images/ico/menu_title_ico_01.png" alt="메뉴아이콘" />
               </div>
               <span>경기도 의원 공약</span>
             </div>
-            {/* //타이틀 */}
-            {/* 내용 */}
             <p>
               경기도의회 의원들의
               <br />
               공약을 확인하세요.
             </p>
-            {/* //내용 */}
-            {/* 버튼 */}
-            <button type="button" className="btn btn_view01" onClick={() => navigate('/detail?region=gyeonggi-do')}>
-              바로가기
+            <button
+              type="button"
+              style={{ gap: 4 }}
+              className="btn btn_view01 f_a_j_c"
+              onClick={() => navigate('/detail?region=gyeonggi-do')}
+            >
+              <span>바로가기</span>
               <img src="/images/ico/view_arrow.png" alt="바로가기 화살표" />
             </button>
-            {/* //버튼 */}
           </div>
-          {/* //경기도 의원공약보기 */}
-          {/* 인천광역시 의원공약보기 */}
           <div className="pledge_menu_box ic01">
             <img src="/images/etc/menu_02_top.png" alt="상단이미지" />
-            {/* 타이틀 */}
             <div className="location_pledge_title">
               <div className="pledge_mark">
                 <img src="/images/ico/menu_title_ico_02.png" alt="메뉴아이콘" />
               </div>
               <span>인천광역시 의원 공약</span>
             </div>
-            {/* //타이틀 */}
-            {/* 내용 */}
             <p>
               인천광역시의회 의원들의
               <br />
               공약을 확인하세요.
             </p>
-            {/* //내용 */}
-            {/* 버튼 */}
-            <button type="button" className="btn btn_view01" onClick={() => navigate('/detail?region=incheon-si')}>
-              바로가기
+            <button
+              type="button"
+              style={{ gap: 4 }}
+              className="btn btn_view01 f_a_j_c"
+              onClick={() => navigate('/detail?region=incheon-si')}
+            >
+              <span>바로가기</span>
               <img src="/images/ico/view_arrow.png" alt="바로가기 화살표" />
             </button>
-            {/* //버튼 */}
           </div>
-          {/* //인천광역시 의원공약보기 */}
-          {/* 경기도시군의회 공약보기 */}
           <div className="pledge_menu_box ky02">
             <img src="/images/etc/menu_03_top.png" alt="상단이미지" />
             {/* 타이틀 */}
@@ -111,54 +94,48 @@ const LandingView: React.FC = () => {
               <div className="pledge_mark">
                 <img src="/images/ico/menu_title_ico_03.png" alt="메뉴아이콘" />
               </div>
-              <span>경기도 31개 시군의원 공약</span>
+              <span>경기도 시군의원 공약</span>
             </div>
-            {/* //타이틀 */}
-            {/* 내용 */}
             <p>
               경기도 31개 시·군의회 의원들의
               <br />
               공약을 확인하세요.
             </p>
-            {/* //내용 */}
-            {/* 버튼 */}
-            <button type="button" className="btn btn_view01" onClick={() => navigate('/detail?region=gyeonggi-si')}>
-              바로가기
+            <button
+              type="button"
+              style={{ gap: 4 }}
+              className="btn btn_view01 f_a_j_c"
+              onClick={() => navigate('/detail?region=gyeonggi-si')}
+            >
+              <span>바로가기</span>
               <img src="/images/ico/view_arrow.png" alt="바로가기 화살표" />
             </button>
-            {/* //버튼 */}
           </div>
-          {/* //경기도시군의회 공약보기 */}
-          {/* 인천광역시 군구의원 공약보기 */}
           <div className="pledge_menu_box ic02">
             <img src="/images/etc/menu_04_top.png" alt="상단이미지" />
-            {/* 타이틀 */}
             <div className="location_pledge_title">
               <div className="pledge_mark">
                 <img src="/images/ico/menu_title_ico_03.png" alt="메뉴아이콘" />
               </div>
-              <span>인천광역시 11개 군구의원 공약</span>
+              <span>인천광역시 군구의원 공약</span>
             </div>
-            {/* //타이틀 */}
-            {/* 내용 */}
             <p>
               인천광역시 11개 군·구 의원들의
               <br />
               공약을 확인하세요.
             </p>
-            {/* //내용 */}
-            {/* 버튼 */}
-            <button type="button" className="btn btn_view01" onClick={() => navigate('/detail?region=incheon-gu')}>
-              바로가기
+            <button
+              type="button"
+              style={{ gap: 4 }}
+              className="btn btn_view01 f_a_j_c"
+              onClick={() => navigate('/detail?region=incheon-gu')}
+            >
+              <span>바로가기</span>
               <img src="/images/ico/view_arrow.png" alt="바로가기 화살표" />
             </button>
-            {/* //버튼 */}
           </div>
-          {/* //인천광역시 군구의원 공약보기 */}
         </div>
-        {/* //하단 메뉴영역 */}
       </div>
-      {/* //콘텐츠 */}
     </div>
   );
 };

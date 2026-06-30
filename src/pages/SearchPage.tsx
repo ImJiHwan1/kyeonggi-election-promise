@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
-import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import Header from '@components/Header.tsx';
 import MemberDetailModal from '@components/MemberDetailModal.tsx';
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
@@ -45,12 +46,7 @@ const SearchPage: React.FC = () => {
   return (
     <>
       <div className="wrapper pledge_contents">
-        <div className="pledge_head_container">
-          <img style={{ cursor: 'pointer' }} src="/images/etc/h_left_logo.png" alt="공약추적단 이미지" onClick={() => navigate('/')} />
-          <Link to="https://www.kyeonggi.com/" target="_blank">
-            <img src="/images/etc/h_right_logo.png" alt="경기일보로고" />
-          </Link>
-        </div>
+        <Header />
 
         <div className="pledge_contents_container">
           <div className="pledge_location_tab" style={{ marginBottom: '40px', padding: '20px' }}>
