@@ -334,6 +334,7 @@ const DetailPage: React.FC = () => {
                               <button
                                 type="button"
                                 className="btn btn_w_view"
+                                disabled={member.election_district.includes('비례대표')}
                                 onClick={() => {
                                   const params = new URLSearchParams();
 

@@ -368,6 +368,10 @@ select {
   word-wrap: normal;
 }
 
+button:disabled {
+  cursor: not-allowed;
+}
+
 [type="button"],
 [type="reset"],
 [type="submit"],
@@ -381,6 +385,9 @@ button {
 button:not(:disabled) {
   cursor: pointer;
 }
+
+
+
 
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
