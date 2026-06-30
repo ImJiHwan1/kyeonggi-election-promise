@@ -25,7 +25,11 @@ a { color:#030303 }
 
 #wrapper .line_horizon { clear:both; border-bottom: 1px #363636 solid; padding-top: 30px; margin-bottom: 30px }
 
-
+.f_a_j_c {
+ display: flex !important;
+ align-items: center !important;
+ justify-content: center !important;
+}
 
 /**************************************
  common
@@ -2484,7 +2488,7 @@ span.txt_marking { position: relative; background-color: rgba(250, 242, 4, 0.58)
 .wrapper .pledge_contents_container { width: 1200px; margin: auto; }
 
 /* 헤더 */
-.wrapper .pledge_head_container { display: flex; justify-content: space-between; align-items: center; width: 1200px; margin: auto; padding: 12px 20px; background-color: #fff; }
+.wrapper .pledge_head_container { display: flex; justify-content: space-between; align-items: center; width: 1200px; margin: auto; padding: 10px 30px 15px; background-color: #fff; }
 
 /* 메인화면 */
 /* 상단 대시보드 */
@@ -2493,7 +2497,7 @@ span.txt_marking { position: relative; background-color: rgba(250, 242, 4, 0.58)
 .wrapper .pledge_contents_container .top_dash .left_dash_txt .top_title h1 { font-size: 45px; color: #fff; font-weight: 800; letter-spacing: -1.2px; }
 .wrapper .pledge_contents_container .top_dash .left_dash_txt .top_title p { font-size: 18px; color: #F8D40B; margin-top: 14px; font-weight: 400; }
 
-.wrapper .pledge_contents_container .top_dash .left_dash_txt .bottom_title { margin-top: 48px; }
+.wrapper .pledge_contents_container .top_dash .left_dash_txt .bottom_title { margin-top: 28px; }
 .wrapper .pledge_contents_container .top_dash .left_dash_txt .bottom_title .sub_title_line { display: flex; align-items: center; margin-bottom: 14px; }
 .wrapper .pledge_contents_container .top_dash .left_dash_txt .bottom_title .sub_title_line img { margin-right: 20px; }
 .wrapper .pledge_contents_container .top_dash .left_dash_txt .bottom_title .sub_title_line span { font-size: 18px; color: #fff; font-weight: 300; }
@@ -2511,41 +2515,37 @@ span.txt_marking { position: relative; background-color: rgba(250, 242, 4, 0.58)
 .wrapper .pledge_contents_container .top_dash .right_dash_con .dash_input_box button.btn_dash_search:hover { background-color: #0F2A52; }
 
 /* 하단메뉴영역 */
-.wrapper .pledge_contents_container .under_menu_container { position: relative; top: -31px; display: flex; gap: 25px; width: 100%; height: 437px; background-color: #F7F8FB; border-radius: 32px 32px 0 0; padding: 52px 26px; }
-.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box { width: 268px; height: 351px; background-color: #fff; border-radius: 28px; padding: 20px 12px; }
-.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box > img { display: block; margin: auto; height: 122px; }
+.wrapper .pledge_contents_container .under_menu_container { position: relative; top: -31px; display: flex; gap: 25px; width: 100%; height: 437px; background-color: #F7F8FB; border-radius: 32px 32px 0 0; padding: 52px 35px; }
+.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box { width: 265px; max-width: 265px; height: 349px; background-color: #fff; border-radius: 28px; padding: 20px 25px; }
+.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box > img { display: block; margin: auto; width: 215px; height: 122px; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box .location_pledge_title { display: flex; align-items: center; margin-top: 17px; margin-bottom: 10px; }
 
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky01 .location_pledge_title .pledge_mark { display: flex; align-items: center; width: 48px; height: 48px; background-color: #0B766B; border-radius: 50%; margin-right: 12px; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky01 .location_pledge_title .pledge_mark img { display: block; margin: auto; width: 24px; height: 24px; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky01 .location_pledge_title span { font-size: 18px; font-weight: 800; letter-spacing: -1.2px; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky01 p { text-align: center; letter-spacing: -1px; }
-.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky01 button.btn_view01 { display: block; margin: auto; width: 208px; height: 47px; background-color: #0B766B; margin-top: 16px; border-radius: 15px; font-size: 18px; color: #fff; }
-.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky01 button.btn_view01 img { margin-left: 10px; }
+.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky01 button.btn_view01 { display: block; margin: 16px auto 0; width: 218px; height: 47px; background-color: #0B766B; border-radius: 15px; font-size: 18px; color: #fff; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky01 button.btn_view01:hover { background-color: #085850; }
 
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic01 .location_pledge_title .pledge_mark { display: flex; align-items: center; width: 48px; height: 48px; background-color: #053486; border-radius: 50%; margin-right: 12px; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic01 .location_pledge_title .pledge_mark img { display: block; margin: auto; width: 24px; height: 24px; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic01 .location_pledge_title span { font-size: 18px; font-weight: 800; letter-spacing: -1.2px; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic01 p { text-align: center; letter-spacing: -1px; }
-.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic01 button.btn_view01 { display: block; margin: auto; width: 208px; height: 47px; background-color: #053486; margin-top: 16px; border-radius: 15px; font-size: 18px; color: #fff; }
-.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic01 button.btn_view01 img { margin-left: 10px; }
+.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic01 button.btn_view01 { display: block; margin: 16px auto 0; width: 218px; height: 47px; background-color: #053486; border-radius: 15px; font-size: 18px; color: #fff; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic01 button.btn_view01:hover { background-color: #052256; }
 
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky02 .location_pledge_title .pledge_mark { display: flex; align-items: center; width: 48px; height: 48px; background-color: #538639; border-radius: 50%; margin-right: 12px; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky02 .location_pledge_title .pledge_mark img { display: block; margin: auto; width: 24px; height: 24px; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky02 .location_pledge_title span { font-size: 18px; font-weight: 800; letter-spacing: -1.2px; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky02 p { text-align: center; letter-spacing: -1px; }
-.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky02 button.btn_view01 { display: block; margin: auto; width: 208px; height: 47px; background-color: #538639; margin-top: 16px; border-radius: 15px; font-size: 18px; color: #fff; }
-.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky02 button.btn_view01 img { margin-left: 10px; }
+.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky02 button.btn_view01 { display: block; margin: 16px auto 0; width: 218px; height: 47px; background-color: #538639; border-radius: 15px; font-size: 18px; color: #fff; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ky02 button.btn_view01:hover { background-color: #3D622A; }
 
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic02 .location_pledge_title .pledge_mark { display: flex; align-items: center; width: 48px; height: 48px; background-color: #073686; border-radius: 50%; margin-right: 12px; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic02 .location_pledge_title .pledge_mark img { display: block; margin: auto; width: 24px; height: 24px; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic02 .location_pledge_title span { font-size: 17px; font-weight: 800; letter-spacing: -1.2px; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic02 p { text-align: center; letter-spacing: -1px; }
-.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic02 button.btn_view01 { display: block; margin: auto; width: 208px; height: 47px; background-color: #073686; margin-top: 16px; border-radius: 15px; font-size: 18px; color: #fff; }
-.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic02 button.btn_view01 img { margin-left: 10px; }
+.wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic02 button.btn_view01 { display: block; margin: 16px auto 0; width: 218px; height: 47px; background-color: #073686; border-radius: 15px; font-size: 18px; color: #fff; }
 .wrapper .pledge_contents_container .under_menu_container .pledge_menu_box.ic02 button.btn_view01:hover { background-color: #05255B; }
 
 /* 세부페이지 */

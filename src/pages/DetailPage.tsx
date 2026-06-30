@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { FC, useEffect, useMemo, useRef, useState } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import Header from '@components/Header.tsx';
 import MemberDetailModal from '@components/MemberDetailModal.tsx';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -10,7 +11,7 @@ import { tabs } from '@/consts';
 import SearchBox from '../components/SearchBox';
 import { useCouncilMembers, useElectionDistricts } from '../hooks/useDataQuery';
 
-const DetailPage: React.FC = () => {
+const DetailPage: FC = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const region = searchParams.get('region') || 'gyeonggi-do';
@@ -125,13 +126,7 @@ const DetailPage: React.FC = () => {
   return (
     <>
       <div className="wrapper pledge_contents">
-        <div className="pledge_head_container">
-          <img style={{ cursor: 'pointer' }} src="/images/etc/h_left_logo.png" alt="공약추적단 이미지" onClick={() => navigate('/')} />
-          <Link to="https://www.kyeonggi.com/" target="_blank">
-            <img src="/images/etc/h_right_logo.png" alt="경기일보로고" />
-          </Link>
-        </div>
-        {/* //헤더 */}
+        <Header />
 
         {/* 콘텐츠 */}
         <div className="pledge_contents_container">
