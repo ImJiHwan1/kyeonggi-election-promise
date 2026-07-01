@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import cn from 'classnames';
+import ScrollBarProvider from '@components/ScrollBarProvider.tsx';
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
 import { useAllMembers, useElectionDistricts } from '@/hooks/useDataQuery';
 import { CouncilMember } from '@/types/data';
@@ -43,37 +44,39 @@ const MobileSearchPage = () => {
       <h2 className="region_title">
         "{query}" 검색 결과 ({filteredMembers.length}건)
       </h2>
-      <div className="member_list">
-        {filteredMembers.map((member: CouncilMember) => (
-          <div key={member.member} className="member_card">
-            <div className="member_thumb">
-              <img src={member.member_image || '/images/etc/no_img_vertical.png'} alt="" />
+      <div className="member_list" style={{ height: 'calc(100vh - 130px)' }}>
+        <ScrollBarProvider>
+          {filteredMembers.map((member: CouncilMember) => (
+            <div key={member.member} className="member_card">
+              <div className="member_thumb">
+                <img src={member.member_image || '/images/etc/no_img_vertical.png'} alt="" />
+              </div>
+              <div className="member_info">
+                <p style={{ fontSize: '0.8rem', color: '#666', marginBottom: '4px' }}>{member.election_district}</p>
+                {districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')] && (
+                  <p style={{ fontSize: '0.8rem', color: '#666', marginBottom: '4px' }}>
+                    ({districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')]})
+                  </p>
+                )}
+                <strong>{member.member} 의원</strong>
+                <span className={cn({ party_blue: member.party_name === '더불어민주당', party_red: member.party_name === '국민의힘' })}>
+                  {member.party_name}
+                </span>
+                {member.etc ? (
+                  <p style={{ marginTop: 28 }}>{member.etc}</p>
+                ) : (
+                  <Link
+                    to={`/member/${member.member}/pledges?region=${member.categoryId}&district=${encodeURIComponent(member.election_district)}&electionArea=${districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')] || ''}`}
+                    className="pledge_btn"
+                  >
+                    공약사항 보기
+                    <em>›</em>
+                  </Link>
+                )}
+              </div>
             </div>
-            <div className="member_info">
-              <p style={{ fontSize: '0.8rem', color: '#666', marginBottom: '4px' }}>{member.election_district}</p>
-              {districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')] && (
-                <p style={{ fontSize: '0.8rem', color: '#666', marginBottom: '4px' }}>
-                  ({districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')]})
-                </p>
-              )}
-              <strong>{member.member} 의원</strong>
-              <span className={cn({ party_blue: member.party_name === '더불어민주당', party_red: member.party_name === '국민의힘' })}>
-                {member.party_name}
-              </span>
-              {member.etc ? (
-                <p style={{ marginTop: 28 }}>{member.etc}</p>
-              ) : (
-                <Link
-                  to={`/member/${member.member}/pledges?region=${member.categoryId}&district=${encodeURIComponent(member.election_district)}&electionArea=${districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')] || ''}`}
-                  className="pledge_btn"
-                >
-                  공약사항 보기
-                  <em>›</em>
-                </Link>
-              )}
-            </div>
-          </div>
-        ))}
+          ))}
+        </ScrollBarProvider>
       </div>
     </div>
   );

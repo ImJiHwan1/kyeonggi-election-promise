@@ -11,6 +11,13 @@ import { tabs } from '@/consts';
 import SearchBox from '../components/SearchBox';
 import { useCouncilMembers, useElectionDistricts } from '../hooks/useDataQuery';
 
+const regionType = [
+  { id: 'gyeonggi-do', name: '경기도의원' },
+  { id: 'gyeonggi-si', name: '경기도시군위원' },
+  { id: 'incheon-si', name: '인천광역시의원' },
+  { id: 'incheon-gu', name: '인천광역시구군위원' },
+];
+
 const DetailPage: FC = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -221,7 +228,7 @@ const DetailPage: FC = () => {
                 <p>{selectedCity === '전체' ? currentTab.label : selectedCity}</p>
               </div>
 
-              {selectedCity !== '전체' && districts.length > 0 && (
+              {selectedCity !== '전체' && districts.length > 1 && (
                 <div className="district_tab_wrapper" style={{ marginTop: '20px' }}>
                   <button type="button" className="btn_tab_arrow prev" onClick={() => handleScroll('left')}>
                     <ChevronLeftIcon />
@@ -295,7 +302,12 @@ const DetailPage: FC = () => {
                           style={{ width: 'calc(25% - 15px)', minWidth: '255px', flex: '0 0 calc(25% - 15px)' }}
                         >
                           <div className="card_location">
-                            <p>{member.election_district}</p>
+                            <p>
+                              {(region === 'gyeonggi-do' || region === 'incheon-si') && member.election_district === '비례대표'
+                                ? regionType.find((r) => r.id === region)?.name
+                                : ''}{' '}
+                              {member.election_district}
+                            </p>
                             {districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')] && (
                               <span style={{ fontSize: '0.8rem', color: '#777', display: 'block', marginTop: '4px' }}>
                                 ({districtAreaMap[member.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')]})

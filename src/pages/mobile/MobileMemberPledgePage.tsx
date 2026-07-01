@@ -1,5 +1,6 @@
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import cn from 'classnames';
+import ScrollBarProvider from '@components/ScrollBarProvider.tsx';
 import { useCouncilMembers } from '@/hooks/useDataQuery';
 import { CouncilMember } from '@/types/data';
 
@@ -33,7 +34,7 @@ const MobileMemberPledgePage = () => {
     : [];
 
   return (
-    <div className="p_modal_wrap" style={{ display: 'block' }}>
+    <div className="p_modal_wrap" style={{ display: 'block', height: '100%' }}>
       <div className="pledge_modal">
         <div className="modal_close" onClick={() => navigate(-1)}>
           ✕
@@ -56,7 +57,7 @@ const MobileMemberPledgePage = () => {
           </div>
         </div>
 
-        <div className="pledge_content">
+        <div className="pledge_content" style={{ height: 'calc(100% - 300px)' }}>
           <div className="pledge_head">
             <strong>공약사항</strong>
           </div>
@@ -77,14 +78,17 @@ const MobileMemberPledgePage = () => {
               {member.etc}
             </div>
           )}
-          <ul className="pledge_list">
-            {pledges?.map((pledge, index) => (
-              <li key={index}>
-                <span className="pledge_num">{index + 1}</span>
-                <p>{pledge}</p>
-              </li>
-            ))}
-          </ul>
+          <ScrollBarProvider>
+            <ul className="pledge_list">
+              {pledges?.map((pledge, index) => (
+                <li key={index}>
+                  <span className="pledge_num">{index + 1}</span>
+                  <p>{pledge}</p>
+                </li>
+              ))}
+            </ul>
+          </ScrollBarProvider>
+
           <p className="pledge_notice" style={{ paddingBottom: 16 }}>
             * 공약내용은 후보자가 제출한 자료를 기반으로 작성되었습니다.
           </p>

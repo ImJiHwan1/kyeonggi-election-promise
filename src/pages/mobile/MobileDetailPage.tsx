@@ -30,9 +30,9 @@ const MobileDetailPage = () => {
 
   return (
     <div className="content_container">
-      <a href="#" className="top_move_02" id="move" style={{ display: 'block' }}>
-        <img src="/images/ico/top_ico.png" alt="위로가기 버튼" className="" />
-      </a>
+      <Link to="/" className="top_move_02" id="move" style={{ display: 'block' }}>
+        <img src="/images/ico/btn_home.png" alt="위로가기 버튼" className="" />
+      </Link>
       <div className="pledge_region list_container">
         <div className="region_tab_wrap">
           {tabs.map((item) => (
@@ -56,7 +56,7 @@ const MobileDetailPage = () => {
           </p>
 
           <div className="region_map">
-            <img src={getMapImg()} alt={`${currentTab.label} 지도`} style={{ height: 410 }} />
+            <img src={getMapImg()} alt={`${currentTab.label} 지도`} />
           </div>
 
           <div className="region_list">

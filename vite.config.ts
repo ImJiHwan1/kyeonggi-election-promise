@@ -5,6 +5,9 @@ import { defineConfig } from 'vite';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  build: {
+    target: 'esnext',
+  },
   css: {
     devSourcemap: false, // Disable CSS sourcemap warnings
   },
