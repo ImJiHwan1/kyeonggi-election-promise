@@ -96,7 +96,7 @@ input[type="password"] {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 input::placeholder {
-  font-size: 13px;
+  font-size: 16px;
   color: #d7d7d7 !important;
   font-weight: 500;
   display: inline-block !important;
@@ -104,7 +104,7 @@ input::placeholder {
 }
 
 textarea::placeholder {
-  font-size: 13px;
+  font-size: 16px;
   color: #d7d7d7 !important;
   font-weight: 500;
 }
