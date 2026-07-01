@@ -192,20 +192,26 @@ const MemberDetailModal: React.FC = () => {
                         </TableContainer>
                       </Box>
                     </Box>
+                    <Box>
+                      <Typography
+                        variant="h6"
+                        style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+                        sx={{
+                          borderBottom: '2px solid #1976d2',
+                          pb: 1,
+                          mb: 2,
+                          fontWeight: 'bold',
+                          marginBottom: 0,
+                        }}
+                      >
+                        <span>공약사항</span>
+                        <span style={{ fontWeight: 500, fontSize: 13, color: '#555' }}>
+                          공약내용은 후보자가 제출한 자료를 기반으로 작성되었습니다.
+                        </span>
+                      </Typography>
+                    </Box>
 
-                    <Typography
-                      variant="h6"
-                      sx={{
-                        borderBottom: '2px solid #1976d2',
-                        pb: 1,
-                        mb: 2,
-                        fontWeight: 'bold',
-                      }}
-                    >
-                      공약사항
-                    </Typography>
-
-                    <Box sx={{ height: 400 }}>
+                    <Box sx={{ height: 'calc(90vh - 460px)' }}>
                       <ScrollBarProvider>
                         {pledges.length > 0 ? (
                           <List dense sx={{ pr: 2 }}>

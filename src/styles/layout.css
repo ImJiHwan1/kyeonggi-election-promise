@@ -2551,8 +2551,8 @@ span.txt_marking { position: relative; background-color: rgba(250, 242, 4, 0.58)
 /* 세부페이지 */
 /* 탭메뉴 */
 .wrapper .pledge_contents_container .pledge_location_tab { display: flex; align-items: center; justify-content: space-between; width: 100%; background-color: #073688; height: 58px; }
-.wrapper .pledge_contents_container .pledge_location_tab .nav-tabs { border: 0; height: 58px; margin-left: 40px; }
-.wrapper .pledge_contents_container .pledge_location_tab .nav-tabs .nav-link { display: flex; align-items: center; font-size: 14px; border: 0; border-radius: 0; }
+.wrapper .pledge_contents_container .pledge_location_tab .nav-tabs { border: 0; height: 58px; margin-left: 30px; }
+.wrapper .pledge_contents_container .pledge_location_tab .nav-tabs .nav-link { display: flex; align-items: center; font-size: 16px; border: 0; border-radius: 0; }
 .wrapper .pledge_contents_container .pledge_location_tab .nav-tabs .nav-link { height: 58px; color: #fff; }
 .wrapper .pledge_contents_container .pledge_location_tab .nav-tabs .nav-link.active { background: #1071F8; border: 0; color: #fff; height: 58px; }
 .wrapper .pledge_contents_container .pledge_location_tab .nav-tabs .nav-link:focus,.wrapper .pledge_contents_container .pledge_location_tab .nav-tabs .nav-link:hover { border: 0 !important; background: #1071F8; }
@@ -2565,8 +2565,8 @@ span.txt_marking { position: relative; background-color: rgba(250, 242, 4, 0.58)
 .wrapper .pledge_contents_container .pledge_location_tab .dash_input_box button.btn_dash_search { padding: 5px 16px; background-color: #143971; font-size: 14px; color: #fff; border-radius: 8px; flex-shrink: 0; }
 .wrapper .pledge_contents_container .pledge_location_tab .dash_input_box button.btn_dash_search:hover { background-color: #0F2A52; }
 
-.pledge_contents_container .pledge_detail_container { padding: 30px; background-color: #FBFBFD; }
-.pledge_contents_container .pledge_detail_container .tab-content .tab-pane .detail_page_title { margin: 20px 0 12px; }
+.pledge_contents_container .pledge_detail_container { padding: 35px 30px; background-color: #FBFBFD; }
+.pledge_contents_container .pledge_detail_container .tab-content .tab-pane .detail_page_title { margin-bottom: 12px; }
 .pledge_contents_container .pledge_detail_container .tab-content .tab-pane .detail_page_title h1 { font-size: 28px; font-weight: 800; color: #05276B; margin-bottom: 16px; }
 .pledge_contents_container .pledge_detail_container .tab-content .tab-pane .detail_page_title p { font-size: 16px; color: #7f7f7f; }
 
@@ -2623,7 +2623,7 @@ span.txt_marking { position: relative; background-color: rgba(250, 242, 4, 0.58)
 .pledge_modal .pledge_content .pledge_notice { margin-top: 15px; font-size: 12px; color: #888; }
 
 /* 지역세부내역 */
-.location_pledge_cotainer { margin-top: 30px; padding: 30px; background-color: #fff; }
+.location_pledge_cotainer { padding: 30px; background-color: #fff; }
 .location_pledge_cotainer.active { display: block; }
 .location_pledge_cotainer.fade_in { opacity: 1; visibility: visible; }
 .location_pledge_cotainer .pledge_loc_title p { font-size: 22px; font-weight: 700; color: #073688; padding-bottom: 7px; border-bottom: 2px #073688 solid; display: flex; justify-content: center; }
