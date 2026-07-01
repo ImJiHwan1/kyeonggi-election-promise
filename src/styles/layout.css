@@ -2577,7 +2577,7 @@ span.txt_marking { position: relative; background-color: rgba(250, 242, 4, 0.58)
 .pledge_contents_container .pledge_detail_container .pledge_detail_contents .location_select .location_select_title p:nth-child(3) { font-size: 14px; color: #7f7f7f; font-weight: 300; margin-top: 16px; }
 
 .pledge_contents_container .pledge_detail_container .pledge_detail_contents .location_select .location_btn_container { margin-top: 20px; }
-.pledge_contents_container .pledge_detail_container .pledge_detail_contents .location_select .location_btn_container button.btn_location { padding: 7px 19px; width: 85px; background-color: #fff; border: 1px #d7d7d7 solid; color: #7f7f7f; border-radius: 6px; }
+.pledge_contents_container .pledge_detail_container .pledge_detail_contents .location_select .location_btn_container button.btn_location { padding: 7px 14px; font-size: 16px; background-color: #fff; border: 1px #d7d7d7 solid; color: #7f7f7f; border-radius: 6px; }
 .pledge_contents_container .pledge_detail_container .pledge_detail_contents .location_select .location_btn_container button.btn_location:hover { background-color: #376295; color: #fff; }
 .pledge_contents_container .pledge_detail_container .pledge_detail_contents .location_select .location_btn_container button.btn_location.active { background-color: #376295; color: #fff; }
 

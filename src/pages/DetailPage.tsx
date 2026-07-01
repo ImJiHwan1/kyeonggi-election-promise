@@ -178,10 +178,7 @@ const DetailPage: FC = () => {
                         <p>시군을 클릭하시면 해당 지역 의원의 공약을 보실 수 있습니다.</p>
                       </div>
 
-                      <div
-                        className="location_btn_container"
-                        style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '7px' }}
-                      >
+                      <div className="location_btn_container" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 7 }}>
                         <button
                           type="button"
                           className={`btn btn_location ${!selectedCity || selectedCity === '전체' ? 'active' : ''}`}
