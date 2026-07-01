@@ -49,7 +49,7 @@ const SearchPage: React.FC = () => {
         <Header />
 
         <div className="pledge_contents_container">
-          <div className="pledge_location_tab" style={{ marginBottom: '40px', padding: '20px' }}>
+          <div className="pledge_location_tab" style={{ padding: 20 }}>
             <div style={{ display: 'flex', alignItems: 'flex-end', width: '100%', flexWrap: 'wrap', gap: '20px' }}>
               <div style={{ width: '400px' }}>
                 <SearchBox initialValue={query} />
@@ -116,7 +116,19 @@ const SearchPage: React.FC = () => {
                           <div className="profile_txt">
                             <div className="profile_con">
                               <p className="p_name">{member.member} 의원</p>
-                              <span className="p_span">{member.party_name}</span>
+                              <span
+                                className="p_span"
+                                style={{
+                                  color:
+                                    member.party_name === '더불어민주당'
+                                      ? '#0288d1'
+                                      : member.party_name === '국민의힘'
+                                        ? '#d32f2f'
+                                        : 'inherit',
+                                }}
+                              >
+                                {member.party_name}
+                              </span>
                             </div>
                             <button
                               type="button"
