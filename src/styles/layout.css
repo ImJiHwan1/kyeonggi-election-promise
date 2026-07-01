@@ -2570,7 +2570,7 @@ span.txt_marking { position: relative; background-color: rgba(250, 242, 4, 0.58)
 .pledge_contents_container .pledge_detail_container .tab-content .tab-pane .detail_page_title h1 { font-size: 28px; font-weight: 800; color: #05276B; margin-bottom: 16px; }
 .pledge_contents_container .pledge_detail_container .tab-content .tab-pane .detail_page_title p { font-size: 16px; color: #7f7f7f; }
 
-.pledge_contents_container .pledge_detail_container .pledge_detail_contents { display: flex; width: 100%; background-color: #fff; padding: 20px; }
+.pledge_contents_container .pledge_detail_container .pledge_detail_contents { display: flex; width: 100%; background-color: #fff; padding: 30px 20px; }
 .pledge_contents_container .pledge_detail_container .pledge_detail_contents .location_map { border-right: 1px #d7d7d7 solid; flex: 1; }
 .pledge_contents_container .pledge_detail_container .pledge_detail_contents .location_select { padding: 20px; flex: 1; }
 .pledge_contents_container .pledge_detail_container .pledge_detail_contents .location_select .location_select_title p { font-size: 20px; font-weight: 800; color: #05276B; }
