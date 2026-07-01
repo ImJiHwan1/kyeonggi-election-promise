@@ -2566,7 +2566,7 @@ span.txt_marking { position: relative; background-color: rgba(250, 242, 4, 0.58)
 .wrapper .pledge_contents_container .pledge_location_tab .dash_input_box button.btn_dash_search:hover { background-color: #0F2A52; }
 
 .pledge_contents_container .pledge_detail_container { padding: 35px 30px; background-color: #FBFBFD; }
-.pledge_contents_container .pledge_detail_container .tab-content .tab-pane .detail_page_title { margin-bottom: 12px; }
+.pledge_contents_container .pledge_detail_container .tab-content .tab-pane .detail_page_title { margin-left: 20px; margin-bottom: 12px; }
 .pledge_contents_container .pledge_detail_container .tab-content .tab-pane .detail_page_title h1 { font-size: 28px; font-weight: 800; color: #05276B; margin-bottom: 16px; }
 .pledge_contents_container .pledge_detail_container .tab-content .tab-pane .detail_page_title p { font-size: 16px; color: #7f7f7f; }
 
