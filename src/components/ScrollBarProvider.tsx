@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode, forwardRef, useEffect, useState } from 'react';
+import { CSSProperties, ReactNode, forwardRef, useEffect, useRef, useState } from 'react';
 import { Scrollbar, Scrollbar as ScrollbarInstance } from 'react-scrollbars-custom';
 import cn from 'classnames';
 import { isUndefined } from 'lodash-es';
@@ -16,14 +16,29 @@ const ScrollBarProvider = forwardRef<ScrollbarInstance, IProps>(
   ({ className, style, contentStyle, children, noScrollX, noScrollY }, ref) => {
     const [isReady, setIsReady] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
+    const [isScrolling, setIsScrolling] = useState(false);
+    const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
       setIsReady(true);
+      return () => {
+        if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+      };
     }, []);
+
+    const handleScroll = () => {
+      setIsScrolling(true);
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+      scrollTimeoutRef.current = setTimeout(() => {
+        setIsScrolling(false);
+      }, 1000);
+    };
 
     if (!isReady) return null;
 
-    const visible = isHovered;
+    const visible = isHovered || isScrolling;
 
     return (
       <Scrollbar
@@ -40,6 +55,7 @@ const ScrollBarProvider = forwardRef<ScrollbarInstance, IProps>(
         removeTrackYWhenNotUsed={false}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onScroll={handleScroll}
         wrapperProps={{
           style: {
             width: '100%',

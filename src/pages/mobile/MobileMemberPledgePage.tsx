@@ -42,7 +42,9 @@ const MobileMemberPledgePage = () => {
 
         <div className="district_info">
           <h3 className="district_name">{member.election_district}</h3>
-          <p className="district_area">{electionArea}</p>
+          <p className="district_area" style={{ padding: '0 22px', textAlign: 'center' }}>
+            {electionArea}
+          </p>
         </div>
 
         <div className="member_card">
@@ -57,7 +59,7 @@ const MobileMemberPledgePage = () => {
           </div>
         </div>
 
-        <div className="pledge_content" style={{ height: 'calc(100% - 300px)' }}>
+        <div className="pledge_content" style={{ height: 'calc(100% - 320px)' }}>
           <div className="pledge_head">
             <strong>공약사항</strong>
           </div>
@@ -79,7 +81,7 @@ const MobileMemberPledgePage = () => {
             </div>
           )}
           <ScrollBarProvider>
-            <ul className="pledge_list">
+            <ul className="pledge_list" style={{ marginRight: 1 }}>
               {pledges?.map((pledge, index) => (
                 <li key={index}>
                   <span className="pledge_num">{index + 1}</span>
