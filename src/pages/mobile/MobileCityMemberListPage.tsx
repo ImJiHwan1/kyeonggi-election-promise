@@ -6,6 +6,13 @@ import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
 import { useCouncilMembers, useElectionDistricts } from '@/hooks/useDataQuery';
 import { CouncilMember } from '@/types/data';
 
+const regionType = [
+  { id: 'gyeonggi-do', name: '경기도의원' },
+  { id: 'gyeonggi-si', name: '경기도시군위원' },
+  { id: 'incheon-si', name: '인천광역시의원' },
+  { id: 'incheon-gu', name: '인천광역시구군위원' },
+];
+
 const MobileCityMemberListPage = () => {
   const { cityName } = useParams();
   const [searchParams] = useSearchParams();
@@ -32,7 +39,7 @@ const MobileCityMemberListPage = () => {
       if (cityName === '비례대표') {
         return m.election_district.includes('비례대표');
       }
-      return m.election_district.replace(/\s/g, '').startsWith(cityName.replace(/\s/g, ''));
+      return m.election_district.replace(/\s/g, '').startsWith(cityName.replace(/\s/g, '')) && !m.election_district.includes('비례대표');
     });
 
     const uniqueDistricts = Array.from(new Set(cityMembers.map((m) => m)));
@@ -49,8 +56,6 @@ const MobileCityMemberListPage = () => {
       'election_district',
     );
   }, [membersData, cityName]);
-
-  console.log(membersData);
 
   const [selectedDistrict, setSelectedDistrict] = useState<CouncilMember | null>(null);
 
@@ -69,51 +74,62 @@ const MobileCityMemberListPage = () => {
     }
   }, [cityDistricts]);
 
-  const districtMembers = useMemo(() => {
-    console.log(membersData, selectedDistrict);
+  const fintRegionName = useMemo(() => {
+    return regionType.find((r) => r.id === region)?.name;
+  }, [region]);
 
+  const districtMembers = useMemo(() => {
     if (!membersData) return [];
     return membersData.filter((item) => item.election_district === selectedDistrict?.election_district);
   }, [membersData, selectedDistrict]);
 
   return (
     <div className="district_wrap">
-      <Link to={`/detail?region=${region}`} className="back_btn">
+      <Link to={`/detail?region=${region}`} className="back_btn f_a_c" style={{ gap: 2 }}>
         <ArrowBackOutlinedIcon />
-        {cityName}
+        {fintRegionName}
       </Link>
 
-      <h2 className="region_title">{cityName} 선거구</h2>
-      <p className="region_desc">
-        선거구를 선택하시면 해당 의원의
-        <br />
-        공약을 확인할 수 있습니다.
-      </p>
+      {cityDistricts.length > 1 && (
+        <>
+          <h2 className="region_title">{cityName} 선거구</h2>
+          <p className="region_desc">
+            선거구를 선택하시면 해당 의원의
+            <br />
+            공약을 확인할 수 있습니다.
+          </p>
 
-      <div className="district_list">
-        {cityDistricts.map((district) => (
-          <a
-            style={{ whiteSpace: 'pre-wrap' }}
-            key={district.election_district}
-            href="#"
-            className={cn('district_btn', { active: selectedDistrict?.election_district === district.election_district })}
-            onClick={(e) => {
-              e.preventDefault();
-              setSelectedDistrict(district);
-            }}
-          >
-            {district.election_district.replace('(', ' \n(')}
-          </a>
-        ))}
-      </div>
+          <div className="district_list">
+            {cityDistricts.map((district) => (
+              <a
+                key={district.election_district}
+                href="#"
+                style={{ minHeight: 44 }}
+                className={cn('district_btn', { active: selectedDistrict?.election_district === district.election_district })}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setSelectedDistrict(district);
+                }}
+                dangerouslySetInnerHTML={{
+                  __html: district.election_district.includes('비례대표')
+                    ? district.election_district.replace(/ /g, '<br />')
+                    : district.election_district.replace(cityName || '', '').replace(/\(/g, '<br />('),
+                }}
+              ></a>
+            ))}
+          </div>
+        </>
+      )}
 
       {selectedDistrict && (
         <div className="district_info">
           <h3 className="district_name">
-            {selectedDistrict.election_district} <span>{selectedDistrict.city_name ? `(${selectedDistrict.city_name})` : ''}</span>
+            {(region === 'gyeonggi-do' || region === 'incheon-si') && cityName === '비례대표' && fintRegionName}{' '}
+            {selectedDistrict.election_district}
+            <span>{selectedDistrict.city_name ? `(${selectedDistrict.city_name})` : ''}</span>
           </h3>
           {districtAreaMap[selectedDistrict.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')] && (
-            <p className="district_area" style={{ color: '#777', fontSize: '0.9rem', marginBottom: '4px' }}>
+            <p className="district_area" style={{ color: '#777', fontSize: '0.9rem', fontWeight: 'normal' }}>
               ({districtAreaMap[selectedDistrict.election_district.replace(/\s/g, '').replace(/\(.*\)/, '')]})
             </p>
           )}
