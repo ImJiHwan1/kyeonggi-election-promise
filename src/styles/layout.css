@@ -2488,7 +2488,7 @@ span.txt_marking { position: relative; background-color: rgba(250, 242, 4, 0.58)
 .wrapper .pledge_contents_container { width: 1200px; margin: auto; }
 
 /* 헤더 */
-.wrapper .pledge_head_container { display: flex; justify-content: space-between; align-items: center; width: 1200px; margin: auto; padding: 10px 30px 15px; background-color: #fff; }
+.wrapper .pledge_head_container { display: flex; justify-content: space-between; align-items: center; width: 1200px; margin: auto; padding: 5px 30px 10px; background-color: #fff; }
 
 /* 메인화면 */
 /* 상단 대시보드 */

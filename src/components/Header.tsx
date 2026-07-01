@@ -6,13 +6,13 @@ const Header = () => {
   return (
     <div className="pledge_head_container">
       <img
-        style={{ cursor: 'pointer', height: 80 }}
+        style={{ cursor: 'pointer', height: 75 }}
         src="/images/etc/h_left_logo.png"
         alt="공약추적단 이미지"
         onClick={() => navigate('/')}
       />
       <Link to="https://www.kyeonggi.com/" target="_blank">
-        <img style={{ width: 135, height: 30 }} src="/images/etc/h_right_logo.png" alt="경기일보로고" />
+        <img style={{ height: 30 }} src="/images/etc/h_right_logo.png" alt="경기일보로고" />
       </Link>
     </div>
   );
