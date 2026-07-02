@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import cn from 'classnames';
 import { useElectionDistricts } from '@hooks/useDataQuery.ts';
-import { tabs } from '@/consts';
+import { mobileTabs, tabs } from '@/consts';
 
 const MobileDetailPage = () => {
   const navigate = useNavigate();
@@ -35,7 +35,7 @@ const MobileDetailPage = () => {
       </Link>
       <div className="pledge_region list_container">
         <div className="region_tab_wrap">
-          {tabs.map((item) => (
+          {mobileTabs.map((item) => (
             <button
               key={item.key}
               type="button"
