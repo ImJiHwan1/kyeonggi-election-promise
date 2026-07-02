@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBox from '@components/SearchBox.tsx';
 import '@styles/layout.css';
-import { tabs } from '@/consts';
+import { mobileTabs } from '@/consts';
 
 const MobileMainPage: React.FC = () => {
   return (
@@ -25,7 +25,7 @@ const MobileMainPage: React.FC = () => {
           <SearchBox type="mobile" />
         </div>
         <div className="pledge-list">
-          {tabs.map((item) => (
+          {mobileTabs.map((item) => (
             <Link key={item.id} to={`/detail?region=${item.id}`} className="pledge-item">
               <img src={`/images/etc/${item.id.split('-')[0]}_logo.svg`} alt="지역구 이미지" style={{ width: 52, height: 52 }} />
               <div className="txt">
